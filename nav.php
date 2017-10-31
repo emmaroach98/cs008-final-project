@@ -7,8 +7,7 @@
             print ' activePage ';
         }
         print '">';
-        print'<a href="index.php">Home</a>';  
-<!-- may have to change href depending on folders -->
+        print'<a href="index.php">Home</a>';  //may have to change href depending on folders
         print'</li>';
         
         print '<li class="';
