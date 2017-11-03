@@ -37,7 +37,7 @@ include 'top.php';
         texts available to as many people as possible. You can view some examples 
         on our <a href="sample-text.php">Sample Texts</a> page, and even put in a request for a text to be 
         translated on our <a href="form.php">Request a Translation</a> page. We want to bring the literature 
-        of other cultures to you as easily as possible. Please visit our blog page 
+        of other cultures to you as easily as possible. Please visit our <a href="blog.php">blog</a> page 
         to see how other users have benefitted from our services, and request a 
         translation to begin your multi-lingual pursuit today.</p>
 </article>
