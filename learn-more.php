@@ -1,7 +1,5 @@
 <?php
-include ('header.php');
 include ('top.php');
-include ('nav.php');
 ?>
 <!--start of Origins article-->
 <article id="origin">
