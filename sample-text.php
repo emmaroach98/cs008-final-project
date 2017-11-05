@@ -74,7 +74,7 @@ if ($debug) {
   }
 }
 //reads file
-print fread($file, 1000); //will need to change max number of bytes depending on size of sample text files
+print fread($file, 2000); //will need to change max number of bytes depending on size of sample text files
 //closes file
 fclose($file);
 
