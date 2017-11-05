@@ -2,7 +2,7 @@
  include ('top.php');
  ?>
  <article id="text1"> 
-   <h1>put title here</h1>
+   <h1>Sneewittchen - The Brothers Grimm, 1854</h1>
    <p>Es war einmal mitten im Winter, und die Schneeflocken fielen wie Federn vom 
     Himmel herab, da saß eine Köngin an einem Fenster, das einen Rahmen von 
     scharzem Ebenholz hatte, und nähte. Und wie soe sp nähte und nach dem Schnee 
@@ -11,7 +11,7 @@
     dachte sie bei sich: "Hätt ich ein Kind so weiß wie Schnee, so rot wie Blut 
     und so schwarz wie das Holz an dem Rahmen." Bald darauf bekam sie ein 
     Töchterlein, das war so weiß wie Schnee, so rot wie Blut und so schwarzhaaring 
-    wie Ebenholz, und ward darum das Schneewittchen (Schneeweißchen) genannt. 
+    wie Ebenholz, und ward darum das Sneewittchen (Schneeweißchen) genannt. 
     Und wie das Kind geboren war, starb die Königin.</p>
    <p>Über ein Jahr nahm sich der König eine andere Gemahlin. Es war eine schöne 
     Frau, aber sie war stolz und übermütig und konnte nicht leiden, daß sie an 
