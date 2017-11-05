@@ -1,7 +1,5 @@
 <?php
- include ('header.php');
  include ('top.php');
- include ('nav.php');
  ?>
  <article id="text1"> 
    <h1>put title here</h1>
