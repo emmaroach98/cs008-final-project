@@ -39,13 +39,11 @@
         print '</thead>';
     foreach ($aboutAuthors as $authorData) {
         print '<tr>';
-    foreach ($authorData as $authorCells) {
         print '<td>';
-        print $authorCells;
+        print $authorData;
         print '</td>;
-    } 
         print '</tr>';
-    }
+        }
     print '</table'>;
     
     include ('footer.php')
