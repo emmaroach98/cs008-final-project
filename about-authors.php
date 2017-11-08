@@ -41,10 +41,10 @@
         print '<tr>';
         print '<td>';
         print $authorData;
-        print '</td>;
+        print '</td>';
         print '</tr>';
         }
-    print '</table'>;
+    print '</table>';
     
     include ('footer.php')
     ?>
