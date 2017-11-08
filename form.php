@@ -19,7 +19,6 @@ include 'lib/mail-message.php';
 // SECTION: 1c form variables
 //
 // define security variable to be used in SECTION 2a.
-
 $thisURL = $domain . $phpSelf;
     
     
@@ -34,7 +33,7 @@ $lastName = ""; // last name input box
 $email = ""; //email input box
 $authorOfText = ""; //author of text wanted translate input box
 $nameOfText = ""; //title of text wanted translate input box
-$languageTranslate = "German"; //radio buttons to click for translation
+$languageTranslate = ""; //radio buttons to click for translation
 $nativeLanguage = "English"; // list box native language spoke
 $spanish = false; //    check box language spoke
 $english = true; //     check box language spoke
@@ -45,7 +44,6 @@ $hindi = false; //      check box language spoke
 $arabic = false; //     check box language spoke
 $totalChecked = 0; // set accumulator value to count how many checked boxes there are
 $comments = ""; // text box addition comments about anything 
-
   
     
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -63,7 +61,6 @@ $languageTranslateERROR = false; // error flag for radio buttons
 $nativeLanguageERROR = false; // error flag for the list box
 $checkLanguageERROR = false; //error flag for the check boxes 
 $commentsERROR = false; //error flag for the comments box at the bottom of the page
-
 // NEED TO CLEAN ALL THESE VARIABLES AND MAKE SECURITY FOR THEM -- BUTTONS HAVE BEEN MADE NEED TO GO THROUGH REST OF PROCESS!!
 ////%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // 
@@ -71,10 +68,8 @@ $commentsERROR = false; //error flag for the comments box at the bottom of the p
 //
 // create array to hold error messages filled (if any) in 2d displayed in 3c.
 $errorMsg = array();
-
 // array used to hold form values that will be written to a CSV file
 $dataRecord = array();
-
 // have we mailed the information to the user?
 $mailed=false; 
     
@@ -84,10 +79,7 @@ $mailed=false;
 // SECTION: 2 Process for when the form is submitted
 //
 if (isset($_POST["btnSubmit"])) {
-
-
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 // SECTION: 2a Security     
     
     if (!securityCheck($thisURL)) {
@@ -95,7 +87,6 @@ if (isset($_POST["btnSubmit"])) {
         $msg.= 'Security breach detected and reported.</p>';
         die($msg);
     }
-
  
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
@@ -201,20 +192,13 @@ if ($nameOfText == "") {
     $errorMsg[] = 'Your text box has illegal characters you may only use numbers, letters, dashes, spaces, single quotes, and periods';
     $nameOfTextERROR = true;
 }
-
   // we need to make a foreach loop to validate that one of the radio buttons are pressed
-foreach ($languageTranslate as $translateButtons){
-    if ($translateButtons == "radGerman" ){
-        $languageTranslateERROR = false;     
-} elseif ($translateButtons == "radFrench") {
-        $languageTranslateERROR = false;
-    } elseif ($translateButtons == "radSpanish"){
-        $languageTranslateERROR = false;
-    } else {
-        $languageTranslateERROR = true;
-    }
-}
 
+    if ($languageTranslate == "" ){
+        $errorMsg[] = "You need to pick a language to translate too";
+        $languageTranslateERROR = true;     
+    }
+    
   // verifying that the comments box is just alpha numeric characters
   if ($comments != "") {
     if (!verifyAlphaNum($comments)) {
@@ -222,7 +206,6 @@ foreach ($languageTranslate as $translateButtons){
      $commentsERROR = true;
   }
 }
-
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
     // SECTION: 2d Process Form - Passed Validation
@@ -230,7 +213,7 @@ foreach ($languageTranslate as $translateButtons){
     // Process for when the form passes validation (the errorMsg array is empty)
     //
     if (!$errorMsg) {
-            print'<p>Form is valid</p>';
+        //    print'<p>Form is valid</p>';
       
     
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -250,7 +233,7 @@ foreach ($languageTranslate as $translateButtons){
       
      //   $filename = $myFolder . $myFileName . $fileExt;
       
-        if ($debug) print PHP_EOL . '<p>filename is ' . $filename;
+     //   if ($debug) print PHP_EOL . '<p>filename is ' . $filename;
     
         // now we just open the file for append
         $file = fopen($filename, 'a');
@@ -269,22 +252,19 @@ foreach ($languageTranslate as $translateButtons){
         // build a message to display on the screen in section 3a and to mail
         // to the person filling our the form (section 2g).
            
-        $message = '<h2>Thanks for joining with our site!</h2>';
-        if ($_POST == ["btnSubmit"]){
-          $message .= '<p style="color:blue;font-size:20px;">';
-          $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . ' Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
-            }
+          $message2 = '<h2>Thanks for joining with our site!</h2>';
+          $message = '<p style="color:blue;font-size:20px;">' . htmlentities($value, ENT_QUOTES, "UTF-8") . ' Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
+          echo $message;
+          
    // THIS ABOVE IF STATEMENT IS A TEST TO SEE IF WE CAN GET RID OF ALL THE VALUES IN THE EMAIL MESSAGE       
        // foreach ($_POST as $htmlName => $value) {
        //         $message .= '<p style="color:blue;font-size:20px;">';
                 //breaks up the form names into words. for example
                 // txtFirstName becomes First Name
        //        $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
-
        //         foreach ($camelCase as $oneWord) {
        //             $message .= $oneWord . ' ';
        //         }
-
        //         $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . ' Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
        //    }
  
@@ -294,7 +274,7 @@ foreach ($languageTranslate as $translateButtons){
         //
         // Process for mailing a message which contains the forms data
         // the message was built section 2f. 
-     $to = $email; // the person who filled out the form
+        $to = $email; // the person who filled out the form
         $cc = '';
         $bcc = '';
     
@@ -317,26 +297,21 @@ foreach ($languageTranslate as $translateButtons){
 ?>
  <article id="main">
 <?php
-
 //
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
     if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked with: end body submit
-        print '<h2>Thank you for using our service!</h2>';
-
+        print '<h2>Thank you for using our service and for joining our website!</h2>';
         print '<p>For your records we sent you a copy of your translation request';
         if (!$mailed){
             print "not ";
         } 
         print 'been sent:</p>';
-        print '<p>To: ' . $email . '</p>';
-
-        print $message;
+        print '<p>To: ' . $email . '</p>';        
 } else {
    
         print '<h2>Get Translated Today!</h2>';
         print '<p class="form-heading">Enter something you would like translated.</p>';
-
         //############################
         //
         // SECTION 3b Error Messages
@@ -641,4 +616,3 @@ foreach ($languageTranslate as $translateButtons){
 
 </body>
 </html>
-
