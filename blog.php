@@ -8,8 +8,8 @@ include 'top.php';
         comments in their native language (we will translate) so that we can 
         continue the connection between different languages. Thank you!</p>
 <article id="blogPosts">    
-    <p class="post">put text here</p>
-    <p class="post">put text here</p>
+    <p class="postExample">put text here</p>
+    <p class="postExample">put text here</p>
     <!-- add more for more posts -->
 </article>
 <?php
