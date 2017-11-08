@@ -14,7 +14,7 @@ $path_parts = pathinfo($phpSelf);
     <meta name="description" content="The art of translation and why it matters">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../css/custom3.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="../css/finalCustom.css" type="text/css" media="screen">
 
     <?php
     $debug = false;
