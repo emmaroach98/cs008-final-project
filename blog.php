@@ -8,8 +8,8 @@ include 'top.php';
         and you might be featured on our blog page. We encourage everyone to leave 
         comments in their native language (we will translate) so that we can 
         continue the connection between different languages. Thank you!</p>
-    <p>put text here</p>
-    <p>put text here</p>
+    <p class="blogPost">put text here</p>
+    <p class="blogPost">put text here</p>
     <!-- add more for more posts -->
 </article>
 <?php
