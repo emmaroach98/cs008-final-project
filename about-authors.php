@@ -38,12 +38,18 @@
         }
         print '</thead>';
     foreach ($aboutAuthors as $authorData) {
+      foreach ($authorData as $bios) {
         print '<tr>';
+         
         print '<td>';
-        print $authorData;
+        
+        print $bios;
+        
         print '</td>';
+      }
         print '</tr>';
-        }
+       
+    }
     print '</table>';
     
     include ('footer.php')
