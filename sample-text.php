@@ -23,7 +23,22 @@
  </article>
  <article id="text2"> 
    <h1>put title here</h1>
-   <p>put text here</p>
+   <p>It was the middle of winter, and the snowflakes were falling like feathers from the 
+    sky. The queen was sitting at the window with a black ebony frame, and sewing. And 
+    while she was sewing, and looking at the snow, she pricked her finger with the needle, 
+    and 3 drops of blood fell onto the snow. And because the red looked so beautiful on the 
+    white snow, she thought, “If only I had a kid with skin as white as snow, lips as red as 
+    blood, and hair as black as the window frame’s ebony.” Soon after, she had a daughter 
+    that was exactly this: skin as white as snow, lips as red as blood, and hair as black as 
+    ebony, who was named Snow White. And as soon as the child was born, the queen died.</p>
+ 	 <p>After a year, the king remarried. His new wife was a pretty woman, but she was proud 
+    and carefree and couldn’t stand that her beauty could be surpassed by others. She had a 
+    magical mirror, which she looked in and said,</p>
+  <p>“Mirror, mirror on the wall,</br>
+   Who is the fairest of them all?”</p>
+	 <p>The mirror would answer, “My Queen, you are the fairest of them all.”</p>
+  <p>Then she was satisfied, because she knew that the mirror only spoke the truth.</p>
+
    <!--add paragraphs as needed depending on content-->
  </article>
  <article id="text3"> 
