@@ -31,13 +31,12 @@
     blood, and hair as black as the window frame’s ebony.” Soon after, she had a daughter 
     that was exactly this: skin as white as snow, lips as red as blood, and hair as black as 
     ebony, who was named Snow White. And as soon as the child was born, the queen died.</p>
- 	 <p>After a year, the king remarried. His new wife was a pretty woman, but she was proud 
+   <p>After a year, the king remarried. His new wife was a pretty woman, but she was proud 
     and carefree and couldn’t stand that her beauty could be surpassed by others. She had a 
-    magical mirror, which she looked in and said,</p>
-  <p>“Mirror, mirror on the wall,</br>
-   Who is the fairest of them all?”</p>
-	 <p>The mirror would answer, “My Queen, you are the fairest of them all.”</p>
-  <p>Then she was satisfied, because she knew that the mirror only spoke the truth.</p>
+    magical mirror, which she looked in and said,</br> “Mirror, mirror on the wall,</br> Who 
+    is the fairest of them all?”</p>
+   <p>The mirror would answer, “My Queen, you are the fairest of them all.”</p>
+   <p>Then she was satisfied, because she knew that the mirror only spoke the truth.</p>
 
    <!--add paragraphs as needed depending on content-->
  </article>
@@ -62,8 +61,22 @@
    <!--add paragraphs as needed depending on content-->
  </article>
  <article id="text4"> 
-   <h1>put title here</h1>
-   <p>put text here</p>
+   <h1>Hansel and Gretel - The Brothers Grimm 1821, translated by Emma Roach</h1>
+   <p>A poor lumberjack lived outside a big forest with his wife and his two kids: the 
+       little boy was named Hansel, and the little girl was named Gretel. The lumberjack 
+       had very little to eat, and once, when the whole country was in a depression, he 
+       couldn’t even afford to buy their daily bread anymore. He was laying in bed one 
+       night, thinking and worrying. He sighed and asked his wife, “What shall become of 
+       us? How can we feed our poor kids, but not have anything left to feed ourselves?” 
+       “You know what, love?” answered his wife. “Tomorrow, early in the morning, let’s 
+       all go together into the thickest part of the woods. There we’ll make a fire, and 
+       give each of the kids a piece of bread, and then we’ll go about our work and leave 
+       them alone. They won’t find their way home, and then we’ll be rid of them.” “No, 
+       love,” said the man, “I can’t do that. How could I ever let myself leave my own 
+       kids alone in the woods to be eaten by wild animals?” “You fool,” she said, “then 
+       we’ll all die from hunger, and you can shape the boards for our coffins,” and she 
+       wouldn’t leave him alone until he agreed. “But the poor kids will surely outlast 
+       me,” said the man.</p>
    <!--add paragraphs as needed depending on content-->
  </article>
  <?php
