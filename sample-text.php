@@ -22,7 +22,7 @@
    <!--add paragraphs as needed depending on content-->
  </article>
  <article id="text2"> 
-   <h1>put title here</h1>
+   <h1>Snow White - The Brothers Grimm 1854, translated by Emma Roach</h1>
    <p>It was the middle of winter, and the snowflakes were falling like feathers from the 
     sky. The queen was sitting at the window with a black ebony frame, and sewing. And 
     while she was sewing, and looking at the snow, she pricked her finger with the needle, 
