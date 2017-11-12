@@ -41,7 +41,7 @@
             print ' activePage ';
         }
         print '">';
-        print'<a href="form.php">Form</a>';
+        print'<a href="form.php">Request a Translation</a>';
         print'</li>';
         
         print '<li class="';
