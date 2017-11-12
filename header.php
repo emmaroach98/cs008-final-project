@@ -1,5 +1,5 @@
 <!-- ######################     Start of header   ############################## -->
 <header class="headerTitle">
-    <h1>name of company</h1>
+    <h1>Translating Burlington</h1>
 </header>
 <!-- ######################     End of header   ############################## -->
