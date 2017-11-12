@@ -1,5 +1,5 @@
 <!-- ######################     Start of footer   ############################## -->
 <footer>
-    <p>name of page</p>
+    <p>Translating Burlington</p>
 </footer>
 <!-- ######################     End of footer   ############################## -->
