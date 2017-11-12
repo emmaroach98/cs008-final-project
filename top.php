@@ -7,7 +7,7 @@ $path_parts = pathinfo($phpSelf);
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Name of Website</title>
+    <title>Translating Burlington</title>
 
     <meta charset="utf-8">
     <meta name="author" content="Emma Roach, Maya Bostwick, Sam Nardone">
