@@ -1,1 +1,35 @@
+*{
+    background-color: rgb(230, 242, 246);
+}
+h1{
+  text-align: center;
+}
 
+img{
+    max-width: 100%;
+}
+
+nav ol {
+    text-align: center;
+}
+
+nav ol li {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 3em;
+}
+
+td{
+  border: thin solid black;
+}
+
+th {
+    border: thin solid black;
+    padding: 1em;
+}
+
+.logo {
+    width: 200px;
+    border: none !important;
+    margin: 0 auto;
+}
