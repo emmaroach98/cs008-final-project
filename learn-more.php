@@ -4,7 +4,7 @@ include ('top.php');
 <!--start of Origins article-->
 <article id="origin">
   <h1>The Origins of Language</h1>
-  <figure class="right-small, img-border"> <!---add more classes as needed-->
+  <figure class="right-small img-border"> <!---add more classes as needed-->
     <img class="" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
@@ -35,7 +35,7 @@ include ('top.php');
 <!--start of Importance article, we may not need 2 articles, depends on CSS we want-->
 <article id="importance"> 
   <h1>Why is Translation Important?</h1>
-  <figure class="right-small, img-border"> <!---add more classes as needed-->
+  <figure class="right-small img-border"> <!---add more classes as needed-->
     <img class="" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
