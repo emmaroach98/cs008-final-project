@@ -4,6 +4,10 @@ include ('top.php');
 <!--start of Origins article-->
 <article id="origin">
   <h1>The Origins of Language</h1>
+  <figure class="right-small"> <!---add more classes as needed-->
+    <img class="" alt="" src="">
+    <figcaption>put caption here</figcaption>
+  </figure>
   <p>Language is perhaps the most important development in our history as humans. 
       Though it is extremely difficult to know for sure how language began, and 
       what the exact origins of language are, since we have no record of when/where/how 
@@ -27,14 +31,14 @@ include ('top.php');
       but we can, and that is something really amazing. There will always be many 
       unknowns about language and its origins, but what matters is that we continue 
       to try to discover everything we can about spoken and written language.</p>
-  <figure class="right-small"> <!---add more classes as needed-->
-    <img class="" alt="" src="">
-    <figcaption>put caption here</figcaption>
-  </figure>
 </article>
 <!--start of Importance article, we may not need 2 articles, depends on CSS we want-->
 <article id="importance"> 
   <h1>Why is Translation Important?</h1>
+  <figure class="right-small"> <!---add more classes as needed-->
+    <img class="" alt="" src="">
+    <figcaption>put caption here</figcaption>
+  </figure>
   <p>Learning a second language later in life is another phenomenon that amazes 
       linguists and neuroscientists. When we learn our native language, we aren’t 
       actively trying to learn; we just do. However, when we learn another language 
@@ -62,10 +66,6 @@ include ('top.php');
       how to speak, listen and read another language. Allow translation to act as 
       a learning mode, as well as an appreciation for other languages. Learn and 
       never stop learning what it means to understand another language.</p>
-  <figure class="right-small"> <!---add more classes as needed-->
-    <img class="" alt="" src="">
-    <figcaption>put caption here</figcaption>
-  </figure>
 </article>
 <?php
 include ('footer.php');
