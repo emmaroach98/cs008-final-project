@@ -33,8 +33,9 @@ $authorOfText = ""; //author of text wanted translate input box
 $nameOfText = ""; //title of text wanted translate input box
 $languageTranslate = ""; //radio buttons to click for translation
 $nativeLanguage = "English"; // list box native language spoke
-$spanish = false; //    check box language spoke
 $english = true; //     check box language spoke
+$spanish = false; //    check box language spoke
+$german = false; //     check box language spoke
 $french = false; //     check box language spoke
 $russian = false; //    check box language spoke  NONE OF THESE CHECKBOXES ARE REQUIRED
 $portuguese = false; // check box language spoke
@@ -508,7 +509,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if($language1) print " checked "; ?>
+                        <input <?php if($english) print " checked "; ?>
                             id="chkEnglish"
                             name="chkEnglish"
                             tabindex="180"
@@ -518,7 +519,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language2) print " checked "; ?>
+                        <input <?php if ($spanish) print " checked "; ?>
                             id="chkSpansih"
                             name="chkSpanish"
                             tabindex="190"
@@ -528,7 +529,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language3) print " checked "; ?>
+                        <input <?php if ($german) print " checked "; ?>
                             id="chkGerman"
                             name="chkGerman"
                             tabindex="200"
@@ -538,7 +539,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language4) print " checked "; ?>
+                        <input <?php if ($french) print " checked "; ?>
                             id="chkFrench"
                             name="chkFrench"
                             tabindex="210"
@@ -548,7 +549,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language5) print " checked "; ?>
+                        <input <?php if ($russian) print " checked "; ?>
                             id="chkRussian"
                             name="chkRussian"
                             tabindex="220"
@@ -558,7 +559,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language6) print " checked "; ?>
+                        <input <?php if ($portuguese) print " checked "; ?>
                             id="chkPortuguese"
                             name="chkPortuguese"
                             tabindex="230"
@@ -568,7 +569,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language7) print " checked "; ?>
+                        <input <?php if ($hindi) print " checked "; ?>
                             id="chkHindi"
                             name="chkHindi"
                             tabindex="240"
@@ -578,7 +579,7 @@ if ($nameOfText == "") {
                 
                 <p>
                     <label class="check-field">
-                        <input <?php if ($language8) print " checked "; ?>
+                        <input <?php if ($arabic) print " checked "; ?>
                             id="chkArabic"
                             name="chkArabic"
                             tabindex="2500"
