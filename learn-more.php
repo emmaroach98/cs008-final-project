@@ -5,7 +5,7 @@ include ('top.php');
 <article id="origin">
   <h1>The Origins of Language</h1>
   <figure class="right-small img-border rounded-corners"> <!---add more classes as needed-->
-    <img class="" alt="" src="">
+    <img class="rounded-corners" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
   <p>Language is perhaps the most important development in our history as humans. 
@@ -36,7 +36,7 @@ include ('top.php');
 <article id="importance"> 
   <h1>Why is Translation Important?</h1>
   <figure class="right-small img-border rounded-corners"> <!---add more classes as needed-->
-    <img class="" alt="" src="">
+    <img class="rounded-corners" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
   <p>Learning a second language later in life is another phenomenon that amazes 
