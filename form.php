@@ -1,7 +1,5 @@
 <?php
 include 'top.php';
-include 'lib/validation-functions.php';
-include 'lib/mail-message.php';
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
 // SECTION: 1 Initialize variables 
