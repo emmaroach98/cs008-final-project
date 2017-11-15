@@ -32,9 +32,8 @@ include 'top.php';
         making this website, it’s amazing!</p>
     <!-- add more for more posts -->
 </article>
-
 <!-- this area is for a user to input their own blog post --> 
-
+<?php
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
 // SECTION: 1 Initialize variables 
@@ -113,7 +112,7 @@ if (isset($_POST["btnSubmit"])) {
     $dataRecord[] = $lastName;
 
  // cleansing the comments section with htmlentities
-    $comments = htmlentities($_POST["txtBlogPost"], ENT_QUOTES, "UTF-8");
+    $blogPost = htmlentities($_POST["txtBlogPost"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $blogPost;
 
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -155,8 +154,7 @@ if ($lastName == "") {
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
     if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked with: end body submit
-        print '<h2>Thank you for using our service and for joining our website!</h2>';
-        print '<p>For your records we sent you a copy of your translation request';
+        print '<h2>Thanks For Posting on Our Blog!</h2>';
        // if (!$mailed){
        //     print "not ";
        // } 
@@ -165,7 +163,7 @@ if ($lastName == "") {
 } else {
    
         print '<h2>Share Something With Us!</h2>';
-        print '<p class="form-heading">Post on Our Blog! Share Your Opinions</p>';
+        print '<p class="form-heading">Post on Our Blog! Share Your Opinions!</p>';
         //############################
         //
         // SECTION 3b Error Messages
@@ -184,7 +182,8 @@ if ($lastName == "") {
             print '</ol>' . PHP_EOL;
             print '</div>' . PHP_EOL;
         }
-        
+}
+}
         //#############################
         //
         // SECTION 3c html Form
@@ -204,7 +203,7 @@ if ($lastName == "") {
 
 <article class='blogPosting'>
        
-    !-- ######################## START OF FORM BUTTONS / TEXT BOXES ############################ -->
+    <!-- ######################## START OF FORM BUTTONS / TEXT BOXES ############################ -->
     <form action="<?php print $phpSelf; ?>"
           id="frmRegister"
           method="post">
@@ -240,7 +239,7 @@ if ($lastName == "") {
                                  value="<?php print $lastName; ?>"
                             >
                      </p>
-    #################### COMMENT BOX HERE ######################## -->
+   <!-- #################### COMMENT BOX HERE ######################## -->
                 <fieldset class="blogPostBox">
                       <p>
                           <label class ="required" for="txtBlogPost">Blog It!</label>
@@ -262,5 +261,6 @@ if ($lastName == "") {
 <?php
 include ('footer.php');
 ?>  
+
 </body>
 </html>
