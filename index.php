@@ -4,7 +4,7 @@ include 'top.php';
 <article>
     <h1>The Art of Translation</h1>
     
-    <figure class="index-right-small">
+    <figure class="right-small">
         <img src="" alt="">
         <figcaption></figcaption>
     </figure>
