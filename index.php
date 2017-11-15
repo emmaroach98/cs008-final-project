@@ -6,7 +6,7 @@ include 'top.php';
     
     <figure class="right-small img-border rounded-corners">
         <img class="rounded-corners" src="" alt="">
-        <figcaption></figcaption>
+        <figcaption>put caption here</figcaption>
     </figure>
     
     <p>In a world where countries have enough trouble communicating with each 
