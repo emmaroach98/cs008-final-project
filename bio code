@@ -1,0 +1,10 @@
+<?php
+            foreach ($images as $image) {
+                print '<figure>';
+                print '<img alt="Nature Images by Ansel Adams" src="images/' . $image[1] . '">';
+                print '<figcaption>';
+                print $image[2];
+                print '</figcaption>';
+                print '</figure>';
+            }
+            ?>
