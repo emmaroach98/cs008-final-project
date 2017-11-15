@@ -27,7 +27,7 @@ include ('top.php');
       but we can, and that is something really amazing. There will always be many 
       unknowns about language and its origins, but what matters is that we continue 
       to try to discover everything we can about spoken and written language.</p>
-  <figure class="img-right"> <!---add more classes as needed-->
+  <figure class="right-small"> <!---add more classes as needed-->
     <img class="" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
@@ -62,7 +62,7 @@ include ('top.php');
       how to speak, listen and read another language. Allow translation to act as 
       a learning mode, as well as an appreciation for other languages. Learn and 
       never stop learning what it means to understand another language.</p>
-  <figure class="img-right"> <!---add more classes as needed-->
+  <figure class="right-small"> <!---add more classes as needed-->
     <img class="" alt="" src="">
     <figcaption>put caption here</figcaption>
   </figure>
