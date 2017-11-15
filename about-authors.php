@@ -25,26 +25,15 @@
         
         fclose($file);
     
-        print '<table class="aboutAuthorTable">';
-        print '<thead class="aboutAuthorHeaders">';
-        foreach ($headers as $header){
-            print '<tr class="tableAuthorHeadingRow">';
-            print '<th>' .$header[0].'</th>';
-            print '<th>' .$header[1].'</th>';       
-            print '<th>' .$header[2].'</th>';
-            print '</tr>';
-        }
-        print '</thead>';
-    foreach ($aboutAuthors as $authorData) {
-        print '<tr>';
-        foreach($authorData as $field) {
-            print '<td>';
-            print $field;
-            print '</td>';
-        }
-        print '</tr>';
-    }
-    print '</table>';
+    foreach ($aboutAuthors as $aboutAuthor) {
+                print '<figure>';
+                print '<img alt="Website Founders" src="images/' . $aboutAuthor[0] . '">';
+                print '<figcaption>';
+                print $aboutAuthor[1] . ' ' . $aboutAuthor[2];
+                print '</figcaption>';
+                print '<p>' . $aboutAuthor[3] . '</p>';
+                print '</figure>';
+            }
     
     include ('footer.php')
     ?>
