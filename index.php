@@ -33,7 +33,7 @@ include 'top.php';
         understanding and ability of multiple languages. The ability to speak more 
         than one language is an experience like no other, an experience that every 
         person should be able to have.</p> 
-    <p>Thus, we here at NAME OF COMPANY are working towards making multi-lingual 
+    <p>Thus, we here at Burlington Translate are working towards making multi-lingual 
         texts available to as many people as possible. You can view some examples 
         on our <a href="sample-text.php">Sample Texts</a> page, and even put in a request for a text to be 
         translated on our <a href="form.php">Request a Translation</a> page. We want to bring the literature 
