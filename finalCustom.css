@@ -8,6 +8,10 @@
     max-width: 100%;
 }
 
+#snowWhite {
+    margin-bottom: 2em;
+}
+
 #text1 {
     border: thin black solid;
     display: inline-block;
