@@ -8,8 +8,14 @@
     max-width: 100%;
 }
 
+#hanselGretel {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 #snowWhite {
-    margin-bottom: 2em;
+    max-width: 80%;
+    margin: 0 auto 2em;
 }
 
 #text1 {
@@ -18,7 +24,7 @@
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    max-width: 45%;   
+    max-width: 44%;   
 }
 
 #text2 {
@@ -27,7 +33,7 @@
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    max-width: 45%; 
+    max-width: 44%; 
 }
 
 #text3 {
@@ -36,7 +42,7 @@
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    max-width: 45%; 
+    max-width: 44%; 
 }
 #text4 {
     border: thin black solid;
@@ -44,7 +50,7 @@
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
-    max-width: 45%; 
+    max-width: 44%; 
 }
 
 article {
