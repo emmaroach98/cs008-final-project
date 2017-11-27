@@ -2,6 +2,7 @@
 * {
     background-color: rgb(230, 242, 246);
     font-family: Georgia,serif; 
+    color: rgb(1, 44, 58);
 }
 
 article {
@@ -36,17 +37,12 @@ nav ol li {
     padding-right: 3em;
 }
 
-td {
-  border: thin solid black;
-}
-
-th {
-    border: thin solid black;
-    padding: 1em;
+.mediumBackground {
+    background-color: rgb(67, 171, 206);
 }
 
 .img-border{
-    border: thin black solid;
+    border: thick rgb(14, 109, 140) solid;
     padding: 1em;
 }
 
@@ -74,7 +70,7 @@ th {
 
 /*===================== blog =====================*/
 .blogPosts {
-    border: thin solid black;
+    border: thin rgb(14, 109, 140) solid;
     border-collapse: collapse;
     margin-top: 1em;
     padding: 1em;
@@ -104,7 +100,7 @@ th {
 }
 
 #text1 {
-    border: thin black solid;
+    border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
     margin-left: 1em;
@@ -113,7 +109,7 @@ th {
 }
 
 #text2 {
-    border: thin black solid;
+    border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
     margin-left: 1em;
@@ -122,7 +118,7 @@ th {
 }
 
 #text3 {
-    border: thin black solid;
+    border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
     margin-left: 1em;
@@ -130,10 +126,11 @@ th {
     max-width: 44%; 
 }
 #text4 {
-    border: thin black solid;
+    border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
     margin-left: 1em;
     margin-right: 1em;
     max-width: 44%; 
 }
+
