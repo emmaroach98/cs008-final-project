@@ -9,7 +9,11 @@ include 'top.php';
         comments in their native language (we will translate) so that we can 
         continue the connection between different languages. Thank you!</p>
 </article>
-<article id="blogPosts">
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/placeholder.jpg">
+        <figcaption>anna101</figcaption>
+    </figure>
     <p class="postExample">Hallo! Ich heiße Anna, und ich komme aus Deutschland. Ich studiere Literatur, 
         und ich finde Übersetzung sehr wichtig, weil viele Länder besser miteinander 
         kommunizieren können, wenn sie die Sprache der andere Länder lesen können. 
@@ -20,6 +24,12 @@ include 'top.php';
         Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
         genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
         Dank für diese Webseite, sie ist sehr schön.</p>
+ </article>
+ <article class="blogPosts">
+     <figure>
+        <img alt="" src="images/placeholder.jpg">
+        <figcaption>anna101</figcaption>
+    </figure>
     <p class="postExampleTranslation">Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
         translation is very important. Countries can communicate with each other better 
         when they can understand the languages of other countries. But a lot of people 
