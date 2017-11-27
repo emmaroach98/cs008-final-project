@@ -1,9 +1,7 @@
 <!-- ######################     Start of header   ############################## -->
 <header class="headerTitle">
     <figure class="logo">
-        <img alt="" src="finalproject/images/placeholder.jpg">
+        <img alt="" src="images/logo.png">
     </figure>
-    <h1>Burlington Translate</h1>
-    <h2>A Customized Translation Experience</h2>
 </header>
 <!-- ######################     End of header   ############################## -->
