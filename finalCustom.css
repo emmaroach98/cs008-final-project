@@ -1,11 +1,68 @@
-*{
+* {
     background-color: rgb(230, 242, 246);
+    font-family: Georgia,serif; 
 }
-h1{
+
+#about-authors footer{
+    margin: 0;
+    max-width: 100%;
+}
+
+#text1 {
+    border: thin black solid;
+    display: inline-block;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 45%;   
+}
+
+#text2 {
+    border: thin black solid;
+    display: inline-block;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 45%; 
+}
+
+#text3 {
+    border: thin black solid;
+    display: inline-block;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 45%; 
+}
+#text4 {
+    border: thin black solid;
+    display: inline-block;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    max-width: 45%; 
+}
+
+article {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+header h1 {
+    text-transform:uppercase;
+    font-size: 30px;
+}
+
+h1 {
   text-align: center;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
@@ -19,7 +76,7 @@ nav ol li {
     padding-right: 3em;
 }
 
-td{
+td {
   border: thin solid black;
 }
 
@@ -28,8 +85,41 @@ th {
     padding: 1em;
 }
 
+.blogPosts {
+    border: thin solid black;
+    border-collapse: collapse;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.blogPosts figure {
+    margin: 0;
+}
+
+.blogPosts figcaption {
+    display: inline;
+}
+
+.blogPosts img {
+    width: 50px;
+}
+
+.img-border{
+    border: thin black solid;
+    padding: 1em;
+}
+
 .logo {
-    width: 200px;
     border: none !important;
     margin: 0 auto;
+    width: 200px;
+}
+
+.right-small {
+    width: 200px;
+    float: right;
+}
+
+.rounded-corners {
+    border-radius: 0.4em;
 }
