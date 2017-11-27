@@ -1,7 +1,7 @@
 <?php
 include ('top.php');
 ?>
-<h1>German Texts translated to English</h1>
+<h1>German Texts Translated to English</h1>
 <section id="snowWhite">
     <article id="text1"> 
         <h2>Sneewittchen - The Brothers Grimm, 1854</h2>
