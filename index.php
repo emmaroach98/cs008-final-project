@@ -4,9 +4,9 @@ include 'top.php';
 <article>
     <h1>The Art of Translation</h1>
     
-    <figure class="right-small img-border rounded-corners">
+    <figure class="mediumBackground right-small img-border rounded-corners">
         <img class="rounded-corners" src="" alt="">
-        <figcaption>put caption here</figcaption>
+        <figcaption class="mediumBackground">put caption here</figcaption>
     </figure>
     
     <p>In a world where countries have enough trouble communicating with each 
