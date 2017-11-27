@@ -1,13 +1,98 @@
+/*===================== general =====================*/
 * {
     background-color: rgb(230, 242, 246);
     font-family: Georgia,serif; 
 }
+
+article {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+footer {
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+   text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+nav ol {
+    text-align: center;
+}
+
+nav ol li {
+    display: inline-block;
+    list-style-type: none;
+    padding-right: 3em;
+}
+
+td {
+  border: thin solid black;
+}
+
+th {
+    border: thin solid black;
+    padding: 1em;
+}
+
+.img-border{
+    border: thin black solid;
+    padding: 1em;
+}
+
+.logo {
+    border: none !important;
+    max-width: 75%;
+    margin: 0 auto;
+}
+
+.right-small {
+    width: 200px;
+    float: right;
+}
+
+.rounded-corners {
+    border-radius: 0.4em;
+}
+
+/*===================== about authors =====================*/
 
 #about-authors footer{
     margin: 0;
     max-width: 100%;
 }
 
+/*===================== blog =====================*/
+.blogPosts {
+    border: thin solid black;
+    border-collapse: collapse;
+    margin-top: 1em;
+    padding: 1em;
+}
+
+.blogPosts figure {
+    margin: 0;
+}
+
+.blogPosts figcaption {
+    display: inline;
+}
+
+.blogPosts img {
+    width: 50px;
+}
+
+/*===================== sample texts =====================*/
 #hanselGretel {
     max-width: 80%;
     margin: 0 auto;
@@ -51,89 +136,4 @@
     margin-left: 1em;
     margin-right: 1em;
     max-width: 44%; 
-}
-
-article {
-    margin: 0 auto;
-    max-width: 80%;
-}
-
-footer {
-    margin: 0 auto;
-    max-width: 80%;
-}
-
-header h1 {
-    text-transform:uppercase;
-    font-size: 30px;
-}
-
-h1 {
-  text-align: center;
-}
-
-h2 {
-   text-align: center;
-}
-
-img {
-    max-width: 100%;
-}
-
-nav ol {
-    text-align: center;
-}
-
-nav ol li {
-    display: inline-block;
-    list-style-type: none;
-    padding-right: 3em;
-}
-
-td {
-  border: thin solid black;
-}
-
-th {
-    border: thin solid black;
-    padding: 1em;
-}
-
-.blogPosts {
-    border: thin solid black;
-    border-collapse: collapse;
-    margin-top: 1em;
-    padding: 1em;
-}
-
-.blogPosts figure {
-    margin: 0;
-}
-
-.blogPosts figcaption {
-    display: inline;
-}
-
-.blogPosts img {
-    width: 50px;
-}
-
-.img-border{
-    border: thin black solid;
-    padding: 1em;
-}
-
-.logo {
-    border: none !important;
-    max-width: 75%;
-    margin: 0 auto;
-}
-
-.right-small {
-    width: 200px;
-    float: right;
-}
-
-.rounded-corners {
-    border-radius: 0.4em;
 }
