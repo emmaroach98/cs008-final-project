@@ -1,7 +1,7 @@
 <?php
 include 'top.php';
 ?>
-<article>        
+<article id="introBlogPost">        
     <h1>Blog</h1>
     <p>Welcome to our blog! Here, we just share some feedback left from different 
         users of our website. Feel free to leave us comments in our request form, 
@@ -24,12 +24,6 @@ include 'top.php';
         Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
         genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
         Dank für diese Webseite, sie ist sehr schön.</p>
- </article>
- <article class="blogPosts">
-     <figure>
-        <img alt="" src="images/placeholder.jpg">
-        <figcaption>anna101</figcaption>
-    </figure>
     <p class="postExampleTranslation">Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
         translation is very important. Countries can communicate with each other better 
         when they can understand the languages of other countries. But a lot of people 
@@ -40,6 +34,8 @@ include 'top.php';
         really good, the translations are very realistic, exact, and understandable, 
         and I will definitely recommend them to other people. Thank you so much for 
         making this website, it’s amazing!</p>
+ </article>
+ 
     <!-- add more for more posts -->
 </article>
 <!-- this area is for a user to input their own blog post --> 
@@ -69,11 +65,8 @@ $thisURL = $domain . $phpSelf;
 // Initialize variables one for each form element
 // in the order they appear on the form    
 $firstName = ""; // first name input box
-
 $lastName = ""; // last name input box
-
 $blogPost = ""; // text box addition comments about anything 
-
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
 // SECTION: 1d form error flags
@@ -81,11 +74,8 @@ $blogPost = ""; // text box addition comments about anything
 // Initialize Error Flags one for each form element we validate 
 // in the order they appear in section 1c. 
 $firstNameERROR = false; // error flag for first name variable
-
 $lastNameERROR = false; //error flag for last name variable
-
 $blogPostERROR = false; //error flag for the comments box at the bottom of the page
-
 // NEED TO CLEAN ALL THESE VARIABLES AND MAKE SECURITY FOR THEM -- BUTTONS HAVE BEEN MADE NEED TO GO THROUGH REST OF PROCESS!!
 ////%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 // 
@@ -120,11 +110,9 @@ if (isset($_POST["btnSubmit"])) {
  // Cleansing the last name text box with html entities    
     $lastName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $lastName;
-
  // cleansing the comments section with htmlentities
     $blogPost = htmlentities($_POST["txtBlogPost"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $blogPost;
-
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
     // SECTION: 2c Validation
@@ -155,12 +143,11 @@ if ($lastName == "") {
 }
   // verifying that the comments box is just alpha numeric characters
   if ($blogPost != "") {
-    if (!verifyAlphaNum($comments)) {
+    if (!verifyAlphaNum($blogPost)) {
      $errorMsg[] = "Your comments appear to have extra characters that are not allowed.";
      $blogPostERROR = true;
   }
 }
-
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
     if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked with: end body submit
@@ -220,6 +207,9 @@ if ($lastName == "") {
         <!-- ######################## FIRST NAME TEXT BOX ######################### -->
                 <fieldset class="contact">
                     <legend>Personal Information</legend>
+                    <p>Feel free to leave a comment here. We will review all comments 
+                        and translate those in other languages, so that everyone can 
+                        share their language experience! Thank you.</p>
                     <p>
                         <label class="required text-field" for="txtFirstName">First Name</label>
                         <input autofocus
