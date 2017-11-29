@@ -75,6 +75,7 @@ nav ol li {
     border-collapse: collapse;
     margin-top: 1em;
     padding: 1em;
+    background-color: rgb(128, 207, 233);
 }
 
 .blogPosts figure {
@@ -87,6 +88,10 @@ nav ol li {
 
 .blogPosts img {
     width: 50px;
+}
+
+.blogPosts p {
+    background-color: rgb(128, 207, 233);
 }
 
 /*===================== sample texts =====================*/
