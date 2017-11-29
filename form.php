@@ -33,7 +33,7 @@ $authorOfText = ""; //author of text wanted translate input box
 $nameOfText = ""; //title of text wanted translate input box
 $languageTranslate = ""; //radio buttons to click for translation
 $nativeLanguage = "English"; // list box native language spoke
-$english = true; //     check box language spoke
+$english = false; //     check box language spoke
 $spanish = false; //    check box language spoke
 $german = false; //     check box language spoke
 $french = false; //     check box language spoke
@@ -41,7 +41,6 @@ $russian = false; //    check box language spoke  NONE OF THESE CHECKBOXES ARE R
 $portuguese = false; // check box language spoke
 $hindi = false; //      check box language spoke
 $arabic = false; //     check box language spoke
-$totalChecked = 0; // set accumulator value to count how many checked boxes there are
 $comments = ""; // text box addition comments about anything 
   
     
@@ -59,6 +58,7 @@ $nameOfTextERROR = false; // error flag to make sure name of text is valid chara
 $languageTranslateERROR = false; // error flag for radio buttons
 $nativeLanguageERROR = false; // error flag for the list box
 $checkLanguageERROR = false; //error flag for the check boxes 
+$totalChecked = 0; // set accumulator value to count how many checked boxes there are
 $commentsERROR = false; //error flag for the comments box at the bottom of the page
 // NEED TO CLEAN ALL THESE VARIABLES AND MAKE SECURITY FOR THEM -- BUTTONS HAVE BEEN MADE NEED TO GO THROUGH REST OF PROCESS!!
 ////%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -123,13 +123,77 @@ if (isset($_POST["btnSubmit"])) {
     $dataRecord[] = $nativeLanguage;
    
   //checking the checkboxes to keep track of how many are pressed
-    if (isset($_POST["chkLanguages"])) {
+    if (isset($_POST["chkEnglish"])) {
         $english = true;
+        $dataRecord[] = htmlentities($_POST["chkEnglish"], ENT_QUOTES, "UTF-8");
         $totalChecked++;
     } else {
         $english = false;
+        $dataRecord[] = "";
     }
-    $dataRecord[] = $english;
+    
+    if (isset($_POST["chkSpanish"])) {
+        $spanish = true;
+        $dataRecord[] = htmlentities($_POST["chkSpanish"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $spanish = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkGerman"])) {
+        $german = true;
+        $dataRecord[] = htmlentities($_POST["chkGerman"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $german = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkFrench"])) {
+        $french = true;
+        $dataRecord[] = htmlentities($_POST["chkFrench"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $french = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkRussian"])) {
+        $russian = true;
+        $dataRecord[] = htmlentities($_POST["chkRussian"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $russian = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkPortuguese"])) {
+        $portuguese = true;
+        $dataRecord[] = htmlentities($_POST["chkPortguese"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $portuguese = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkHindi"])) {
+        $hindi = true;
+        $dataRecord[] = htmlentities($_POST["chkHindi"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $hindi = false;
+        $dataRecord[] = "";
+    }
+    
+    if (isset($_POST["chkArabic"])) {
+        $arabic = true;
+        $dataRecord[] = htmlentities($_POST["chkArabic"], ENT_QUOTES, "UTF-8");
+        $totalChecked++;
+    } else {
+        $arabic = false;
+        $dataRecord[] = "";
+    }
   
  // cleansing the comments section with htmlentities
     $comments = htmlentities($_POST["txtComments"], ENT_QUOTES, "UTF-8");
@@ -581,7 +645,7 @@ if ($nameOfText == "") {
                         <input <?php if ($arabic) print " checked "; ?>
                             id="chkArabic"
                             name="chkArabic"
-                            tabindex="250"
+                            tabindex="2500"
                             type="checkbox"
                             value="arabic">Arabic</label>
                 </p>
@@ -594,14 +658,14 @@ if ($nameOfText == "") {
                               id="txtComments"
                               name="txtComments"
                               onfocus="this.select()"
-                              tabindex="260"><?php print $comments; ?></textarea>
+                              tabindex="200"><?php print $comments; ?></textarea>
                       </p>
                 </fieldset>
      <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
      
             <fieldset class="buttons">
                 <legend></legend>
-                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="270" type="submit" value="Register" >
+                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
     </form>
     
