@@ -64,6 +64,11 @@ nav ol li {
 
 /*===================== about authors =====================*/
 
+#about-authors footer{
+    margin: 0;
+    max-width: 100%;
+}
+
 /*===================== blog =====================*/
 .blogPosts {
     border: thin rgb(14, 109, 140) solid;
@@ -112,4 +117,44 @@ nav ol li {
 }
 #text4 {
     float: right;
+}
+
+/*===================== form =====================*/
+#btnSubmit {
+    border: thin outset rgb(14, 109, 140);
+    border-radius: 1em;
+    background-color: rgb(67, 171, 206);
+}
+
+#btnSubmit:active {
+    border: thin inset rgb(14, 109, 140);
+}
+
+fieldset {
+    border: thin rgb(14, 109, 140) solid;
+}
+
+input {
+    border: 3px ridge rgb(14, 109, 140);
+}
+
+input:focus {
+    background-color: rgb(128, 207, 233);
+}
+
+select {
+    border: 3px ridge rgb(14, 109, 140);
+}
+
+select:focus {
+    background-color: rgb(128, 207, 233);
+}
+
+textarea {
+    border: 3px ridge rgb(14, 109, 140);
+    
+}
+
+textarea:focus {
+    background-color: rgb(128, 207, 233);
 }
