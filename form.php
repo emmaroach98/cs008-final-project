@@ -192,7 +192,6 @@ if ($nameOfText == "") {
     $nameOfTextERROR = true;
 }
   // we need to make a foreach loop to validate that one of the radio buttons are pressed
-
     if ($languageTranslate == "" ){
         $errorMsg[] = "You need to pick a language to translate too";
         $languageTranslateERROR = true;     
@@ -251,8 +250,8 @@ if ($nameOfText == "") {
         // build a message to display on the screen in section 3a and to mail
         // to the person filling our the form (section 2g).
            
-          $message2 = '<h2>Thanks for joining with our site!</h2>';
-          $message = '<p style="color:blue;font-size:20px;">' . htmlentities($value, ENT_QUOTES, "UTF-8") . ' Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
+          $message = '<h2>Thanks for joining with our site!</h2>';
+          $message .= '<p style="color:blue;font-size:20px;">Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
           echo $message;
           
    // THIS ABOVE IF STATEMENT IS A TEST TO SEE IF WE CAN GET RID OF ALL THE VALUES IN THE EMAIL MESSAGE       
@@ -301,7 +300,7 @@ if ($nameOfText == "") {
 // to display the form.
     if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked with: end body submit
         print '<h2>Thank you for using our service and for joining our website!</h2>';
-        print '<p>For your records we sent you a copy of your translation request';
+        print '<p>For your records we sent you a copy of your translation request has ';
         if (!$mailed){
             print "not ";
         } 
@@ -364,7 +363,7 @@ if ($nameOfText == "") {
                                  placeholder="First Name"
                                  tabindex="100"
                                  type="text"
-                                 value="<?php print $firstName; ?>"
+                                 value="First Name"
                             >
                     </p>
         <!-- #################### LAST NAME TEXT BOX ################### -->
@@ -379,7 +378,7 @@ if ($nameOfText == "") {
                                  placeholder="Last Name"
                                  tabindex="110"
                                  type="text"
-                                 value="<?php print $lastName; ?>"
+                                 value="Last Name"
                             >
                      </p>
       <!-- #################### EMAIL TEXT BOX ###################### --> 
@@ -394,7 +393,7 @@ if ($nameOfText == "") {
                                 placeholder="Enter a valid email address"
                                 tabindex="120"
                                 type="text"
-                                value="<?php print $email; ?>"
+                                value="Email"
                             >
                     </p>
                     
@@ -406,10 +405,10 @@ if ($nameOfText == "") {
                                 maxlength="45"
                                 name="txtAuthor"
                                 onfocus="this.select()"
-                                placeholder="Authors Name of Text"
+                                placeholder="Authors Name"
                                 tabindex="130"
                                 type="text"
-                                value="<?php print $authorOfText; ?>"
+                                value="Author of Text>"
                             >
                     </p>
                     
@@ -424,7 +423,7 @@ if ($nameOfText == "") {
                                 placeholder="Enter name of text to translate"
                                 tabindex="140"
                                 type="text"
-                                value="<?php print $nameOfText; ?>"
+                                value="Name of Text"
                             >
                      </p>          
                   
@@ -439,7 +438,7 @@ if ($nameOfText == "") {
                         <input type="radio"
                                id="radTranslateGerman"
                                name="radLanguages"
-                               value="radGerman"
+                               value="German"
                                tabindex="150"
                                <?php if ($languageTranslate == "radGerman") echo ' checked="checked" '; ?>>
                         German</label>
@@ -450,7 +449,7 @@ if ($nameOfText == "") {
                         <input type="radio"
                                id="radTranslateFrench"
                                name="radLanguages"
-                               value="radFrench"
+                               value="French"
                                tabindex="160"
                                <?php if ($languageTranslate == "radFrench") echo ' checked="checked" '; ?>>
                         French</label>
@@ -461,7 +460,7 @@ if ($nameOfText == "") {
                         <input type="radio"
                                id="radTranslateSpanish"
                                name="radLanguages"
-                               value="radSpanish"
+                               value="Spanish"
                                tabindex="170"
                                <?php if ($languageTranslate == "radSpanish") echo ' checked="checked" '; ?>>
                         Spanish</label>
