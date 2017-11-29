@@ -581,7 +581,7 @@ if ($nameOfText == "") {
                         <input <?php if ($arabic) print " checked "; ?>
                             id="chkArabic"
                             name="chkArabic"
-                            tabindex="2500"
+                            tabindex="250"
                             type="checkbox"
                             value="arabic">Arabic</label>
                 </p>
@@ -594,14 +594,14 @@ if ($nameOfText == "") {
                               id="txtComments"
                               name="txtComments"
                               onfocus="this.select()"
-                              tabindex="200"><?php print $comments; ?></textarea>
+                              tabindex="260"><?php print $comments; ?></textarea>
                       </p>
                 </fieldset>
      <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
      
             <fieldset class="buttons">
                 <legend></legend>
-                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
+                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="270" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
     </form>
     
