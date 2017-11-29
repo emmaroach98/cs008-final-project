@@ -11,6 +11,7 @@ article {
 }
 
 footer {
+    text-align: center;
     margin: 0 auto;
     max-width: 80%;
 }
@@ -63,11 +64,6 @@ nav ol li {
 
 /*===================== about authors =====================*/
 
-#about-authors footer{
-    margin: 0;
-    max-width: 100%;
-}
-
 /*===================== blog =====================*/
 .blogPosts {
     border: thin rgb(14, 109, 140) solid;
@@ -89,48 +85,31 @@ nav ol li {
 }
 
 /*===================== sample texts =====================*/
-#hanselGretel {
+#sample-text section{
     max-width: 80%;
     margin: 0 auto;
 }
 
-#snowWhite {
-    max-width: 80%;
-    margin: 0 auto 2em;
+#sample-text article {
+    border: thin rgb(14, 109, 140) solid;
+    display: inline-block;
+    padding: 1em;
+    width: 400px;
+    height: 650px;
+    margin: 1em;
 }
 
 #text1 {
-    border: thin rgb(14, 109, 140) solid;
-    display: inline-block;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    max-width: 44%;   
+    float: left;
 }
 
 #text2 {
-    border: thin rgb(14, 109, 140) solid;
-    display: inline-block;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    max-width: 44%; 
+    float: right;
 }
 
 #text3 {
-    border: thin rgb(14, 109, 140) solid;
-    display: inline-block;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    max-width: 44%; 
+    float: left;
 }
 #text4 {
-    border: thin rgb(14, 109, 140) solid;
-    display: inline-block;
-    padding: 1em;
-    margin-left: 1em;
-    margin-right: 1em;
-    max-width: 44%; 
+    float: right;
 }
-
