@@ -24,7 +24,7 @@ include 'top.php';
         Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
         genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
         Dank für diese Webseite, sie ist sehr schön.</p>
-    <p class="postExampleTranslation">Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
+    <p class="postExampleTranslation">Translation: Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
         translation is very important. Countries can communicate with each other better 
         when they can understand the languages of other countries. But a lot of people 
         can only speak/read one or two languages, and therefore translators are very 
