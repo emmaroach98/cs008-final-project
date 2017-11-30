@@ -26,7 +26,7 @@
         fclose($file);
     
     foreach ($aboutAuthors as $aboutAuthor) {
-                print '<figure class="bioPhoto">';
+                print '<figure class="bioPhoto rounded-corners">';
                 print '<img alt="Website Founders" src="images/' . $aboutAuthor[0] . '">';
                 print '<figcaption>';
                 print $aboutAuthor[1] . ' ' . $aboutAuthor[2];
