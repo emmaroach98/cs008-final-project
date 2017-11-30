@@ -70,8 +70,10 @@ nav ol li {
 }
 
 .bioPhoto {
-    width: 30%;
+    width: 23%;
     float: left;
+    border: thin solid rgb(14, 109, 140);
+    padding: 0.5em;
 }
 
 #about-authors p {
