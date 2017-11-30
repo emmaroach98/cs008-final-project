@@ -143,6 +143,7 @@ fieldset {
 
 input {
     border: 3px ridge rgb(14, 109, 140);
+    background-color: rgb(128, 207, 233);
 }
 
 input:focus {
@@ -151,6 +152,7 @@ input:focus {
 
 select {
     border: 3px ridge rgb(14, 109, 140);
+    background-color: rgb(128, 207, 233);
 }
 
 select:focus {
@@ -159,6 +161,7 @@ select:focus {
 
 textarea {
     border: 3px ridge rgb(14, 109, 140);
+    background-color: rgb(128, 207, 233);
     
 }
 
