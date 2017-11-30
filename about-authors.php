@@ -26,13 +26,13 @@
         fclose($file);
     
     foreach ($aboutAuthors as $aboutAuthor) {
-                print '<figure>';
+                print '<figure class="bioPhoto">';
                 print '<img alt="Website Founders" src="images/' . $aboutAuthor[0] . '">';
                 print '<figcaption>';
                 print $aboutAuthor[1] . ' ' . $aboutAuthor[2];
                 print '</figcaption>';
-                print '<p>' . $aboutAuthor[3] . '</p>';
                 print '</figure>';
+                print '<p>' . $aboutAuthor[3] . '</p>';
             }
     
     include ('footer.php')
