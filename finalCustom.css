@@ -137,6 +137,8 @@ nav ol li {
 
 fieldset {
     border: thin rgb(14, 109, 140) solid;
+    padding: 1em;
+    margin: 1em;
 }
 
 input {
