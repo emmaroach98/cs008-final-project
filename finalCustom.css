@@ -69,6 +69,16 @@ nav ol li {
     max-width: 100%;
 }
 
+.bioPhoto {
+    width: 30%;
+    float: left;
+}
+
+#about-authors p {
+    width: 50%;
+    float: right;
+}
+
 /*===================== blog =====================*/
 .blogPosts {
     border: thin rgb(14, 109, 140) solid;
