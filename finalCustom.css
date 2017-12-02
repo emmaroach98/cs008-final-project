@@ -6,8 +6,8 @@
 }
 
 article {
-    margin: 0 auto;
-    max-width: 80%;
+    margin: 1em auto;
+    width: 80%;
 }
 
 footer {
@@ -65,20 +65,28 @@ nav ol li {
 /*===================== about authors =====================*/
 
 #about-authors footer{
-    margin: 0;
-    max-width: 100%;
+    margin: auto;
+    width: 100%;
 }
 
 .bioPhoto {
-    width: 23%;
-    float: left;
+    display: inline-block;
+    width: 100%;
     border: thin solid rgb(14, 109, 140);
-    padding: 0.5em;
+    padding: 1em;
+}
+
+.authorBio figure {
+    float: left;
+    width: 250px;
+    text-align: center;
 }
 
 #about-authors p {
-    width: 50%;
-    float: right;
+    display: inline-block;
+    float: left;
+    text-align: left;
+    width: 60%;
 }
 
 /*===================== blog =====================*/
