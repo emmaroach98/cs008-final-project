@@ -50,7 +50,7 @@ nav ol li {
 }
 
 .right-small {
-    width: 200px;
+    width: 350px;
     float: right;
 }
 
@@ -115,6 +115,7 @@ nav ol li {
     width: 450px;
     height: 650px;
     margin: 2em;
+    border-radius: 0.4em;
 }
 
 #text2, #text4, #text6 {
@@ -125,6 +126,7 @@ nav ol li {
     width: 450px;
     height: 650px;
     margin: 2em;
+    border-radius: 0.4em;
 }
 
 /*===================== form =====================*/
@@ -142,11 +144,13 @@ fieldset {
     border: thin rgb(14, 109, 140) solid;
     padding: 1em;
     margin: 1em;
+    border-radius: 0.4em;
 }
 
 input {
     border: 3px ridge rgb(14, 109, 140);
     background-color: rgb(128, 207, 233);
+        border-radius: 0.4em;
 }
 
 input:focus {
@@ -165,6 +169,7 @@ select:focus {
 textarea {
     border: 3px ridge rgb(14, 109, 140);
     background-color: rgb(128, 207, 233);
+    border-radius: 0.4em;
     
 }
 
