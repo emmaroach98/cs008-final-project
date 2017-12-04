@@ -17,6 +17,11 @@ footer {
     clear: both;
 }
 
+footer p {
+    padding: 20px;
+    background-color: rgb(14, 109, 140);
+}
+
 header {
     background-color: rgb(14, 109, 140);
 }
