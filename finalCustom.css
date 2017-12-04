@@ -154,7 +154,7 @@ input {
 }
 
 input:focus {
-    background-color: rgb(128, 207, 233);
+    background-color: rgb(67, 171, 206);
 }
 
 select {
@@ -163,7 +163,7 @@ select {
 }
 
 select:focus {
-    background-color: rgb(128, 207, 233);
+    background-color: rgb(67, 171, 206);
 }
 
 textarea {
@@ -174,5 +174,5 @@ textarea {
 }
 
 textarea:focus {
-    background-color: rgb(128, 207, 233);
+    background-color: rgb(67, 171, 206);
 }
