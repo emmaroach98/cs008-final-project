@@ -34,7 +34,7 @@ include 'top.php';
         really good, the translations are very realistic, exact, and understandable, 
         and I will definitely recommend them to other people. Thank you so much for 
         making this website, it’s amazing!</p>
- </article>
+</article>
 
 <article class="blogPosts">
     <figure>
@@ -49,10 +49,9 @@ include 'top.php';
         I love translation because I like reading books from many languages, but 
         I can't read every language. Therefore translation is necessary. This website
         is wonderful! Thank you for the translations!</p>
- </article>
- 
-    <!-- add more for more posts -->
 </article>
+
+<!-- add more for more posts -->
 <!-- this area is for a user to input their own blog post --> 
 <?php
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -62,11 +61,10 @@ include 'top.php';
 // SECTION: 1a. 
 // We print out the post array so that we can see our form is working. 
 // if ($debug){ // later you can uncomment the if statement
-    print '<p>Post Array:</p><pre>';
-    print_r($_POST);
-    print '</pre>';
+print '<p>Post Array:</p><pre>';
+print_r($_POST);
+print '</pre>';
 // }
-    
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
 // SECTION: 1c form variables
@@ -112,10 +110,10 @@ $mailed = false;
 if (isset($_POST["btnSubmit"])) {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // SECTION: 2a Security     
-    
+
     if (!securityCheck($thisURL)) {
         $msg = '<p>Sorry you cannot access this page. ';
-        $msg.= 'Security breach detected and reported.</p>';
+        $msg .= 'Security breach detected and reported.</p>';
         die($msg);
     }
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -123,24 +121,22 @@ if (isset($_POST["btnSubmit"])) {
     // SECTION: 2b Saitize (clean) data
     //remove any potential JavaScript or html code from users input on the 
     // form. Note it is best to follow the same order as declared in section 1c.
-    
-    
- //cleansing the first name text box with html entities
+    //cleansing the first name text box with html entities
     $firstName1 = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
     $dataRecordBlog[] = $firstName1;
-  
- // Cleansing the last name text box with html entities    
+
+    // Cleansing the last name text box with html entities    
     $lastName1 = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
     $dataRecordBlog[] = $lastName1;
-    
+
 // cleansing the email text box with fiter_var and FILTER_SANITIZE_EMAIL  
-    $email1 = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);   
+    $email1 = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
     $dataRecordBlog[] = $email1;
-    
- // cleansing the comments section with htmlentities
+
+    // cleansing the comments section with htmlentities
     $blogPost1 = htmlentities($_POST["txtBlogPost"], ENT_QUOTES, "UTF-8");
     $dataRecordBlog[] = $blogPost1;
-    
+
     //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
     //
     // SECTION: 2c Validation
@@ -151,36 +147,35 @@ if (isset($_POST["btnSubmit"])) {
     // order that the elements appear on your form so that the error messages
     // will be in the order they appear. errorMsg will be displayed on the form
     // see section 3b. The error flag ($emailERROR) will be used in section 3c. 
-    
- //Verifing user inputs name correctly
- if ($firstName1 == "") {
-    $errorMsg1[] = "Please enter your first name";
-    $firstName1ERROR = true;
-} elseif (!verifyAlphaNum($firstName1)) {
-    $errorMsg1[] = "Your first name appears to have extra characters";
-    $firstName1ERROR = true;
-    }  
-  
+    //Verifing user inputs name correctly
+    if ($firstName1 == "") {
+        $errorMsg1[] = "Please enter your first name";
+        $firstName1ERROR = true;
+    } elseif (!verifyAlphaNum($firstName1)) {
+        $errorMsg1[] = "Your first name appears to have extra characters";
+        $firstName1ERROR = true;
+    }
+
 //verifying user inputs last name correctly
-if ($lastName1 == "") {
-    $errorMsg1[] = "Please enter your last name";
-    $lastName1ERROR = true;
-} elseif (!verifyAlphaNum($lastName1)) {
-    $errorMsg1[] = "Your last name appears to have extra characters";
-    $lastName1ERROR = true;
-}
+    if ($lastName1 == "") {
+        $errorMsg1[] = "Please enter your last name";
+        $lastName1ERROR = true;
+    } elseif (!verifyAlphaNum($lastName1)) {
+        $errorMsg1[] = "Your last name appears to have extra characters";
+        $lastName1ERROR = true;
+    }
 
 // verifying that the users email address in inputted correctly     
-if ($email1 == "") {
-    $errorMsg1[] = 'Please enter your email address';
-    $email1ERROR = true;
-} elseif (!verifyEmail($email1)) {
-    $errorMsg1[] = 'Your email address appears to be incorrect.';
-    $email1ERROR = true;
-}
+    if ($email1 == "") {
+        $errorMsg1[] = 'Please enter your email address';
+        $email1ERROR = true;
+    } elseif (!verifyEmail($email1)) {
+        $errorMsg1[] = 'Your email address appears to be incorrect.';
+        $email1ERROR = true;
+    }
 
 // verifying that the comments box is just alpha numeric characters
-  if ($blogPost1 != "") {
+    if ($blogPost1 != "") {
         if (!verifyAlphaNum($blogPost1)) {
             $errorMsg1[] = "Your post appears to have extra characters that are not allowed";
             $blogPost1ERROR = true;
@@ -196,27 +191,25 @@ if ($email1 == "") {
 
 if (!$errorMsg1) {
         //    print'<p>Form is valid</p>';
-      
-    
         //@@@@@@@@@@@@@@@@@@@@@@@@@@@@
         //
         // SECTION: 2e Save Data
         //
         //
        // $myFolder = 'data/';
-    
+
         $myFileNameOne = 'blogPosts';
-        
+
         $theFileExt = '.csv';
-      
+
         $newFileName = $myFileNameOne . $theFileExt;
-      
+
         // now we just open the file for append
         $newFile = fopen($newFileName, 'a');
-    
+
         // write the forms informations
         fputcsv($newFile, $dataRecordBlog);
-    
+
         // close the file
         fclose($newFile);
 
@@ -224,26 +217,26 @@ if (!$errorMsg1) {
         //
         // build a message to display on the screen in section 3a and to mail
         // to the person filling our the form (section 2g).
-           
-          $message = '<p style="color:blue;font-size:20px;">Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
-          echo $message;
-        
-          
+
+        $message = '<p style="color:blue;font-size:20px;">Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
+        echo $message;
+
+
 // THIS ABOVE IF STATEMENT IS A TEST TO SEE IF WE CAN GET RID OF ALL THE VALUES IN THE EMAIL MESSAGE       
         foreach ($_POST as $htmlName => $value) {
-                $message .= '<p style="color:blue;font-size:20px;">';
-                //breaks up the form names into words. for example
-                // txtFirstName becomes First Name
-               $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
-                foreach ($camelCase as $oneWord) {
-                   $message .= $oneWord . ' ';
-                }
-               $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';         
-              }
-              
-              $message .= '<p style="color:blue;font-size:20px;">Thank you for posting on our blog! We will review your comment and post all appropriate comments soon.</p>';
- 
-     //@@@@@@@@@@@@@@@@@@@@@@@@@@
+            $message .= '<p style="color:blue;font-size:20px;">';
+            //breaks up the form names into words. for example
+            // txtFirstName becomes First Name
+            $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
+            foreach ($camelCase as $oneWord) {
+                $message .= $oneWord . ' ';
+            }
+            $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
+        }
+
+        $message .= '<p style="color:blue;font-size:20px;">Thank you for posting on our blog! We will review your comment and post all appropriate comments soon.</p>';
+
+        //@@@@@@@@@@@@@@@@@@@@@@@@@@
         //
         // SECTION: 2g Mail to user
         //
@@ -252,168 +245,162 @@ if (!$errorMsg1) {
         $to = $email1; // the person who filled out the form
         $cc = '';
         $bcc = '';
-    
+
         $from = 'Translation Team <customer.service@BurlingtonTranslate.com>';
-    
+
         // subject of mail should make sense in your form
         $subject = 'Translation Registration!';
-        
+
         $mailed = sendMail($to, $cc, $bcc, $from, $subject, $message);
-     
-        
     } // ends if form is valid
-    
 }  // ends if form was submitted
-                
-              
-        
 // SECTION 3 Display Form
 //
 ?>
- <article id="blogPost">
-<?php   
+<article id="blogPost">
+<?php
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
-    if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked with: end body submit
-        print '<h2>Thank you for posting on our blog!</h2>';
-        print '<p>For your records we sent you a copy of your comment has ';
-        if (!$mailed){
-            print "not ";
-        } 
-        print 'been sent:</p>';
-        print '<p>To: ' . $email1 . '</p>';        
+if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked with: end body submit
+    print '<h2>Thank you for posting on our blog!</h2>';
+    print '<p>For your records we sent you a copy of your comment has ';
+    if (!$mailed) {
+        print "not ";
+    }
+    print 'been sent:</p>';
+    print '<p>To: ' . $email1 . '</p>';
 } else {
-   
-        print '<h2>Share Something With Us!</h2>';
-        print '<p class="form-heading">Post on Our Blog! Share Your Opinions!</p>';
-        //############################
-        //
+
+    print '<h2>Share Something With Us!</h2>';
+    print '<p class="form-heading">Post on Our Blog! Share Your Opinions!</p>';
+    //############################
+    //
         // SECTION 3b Error Messages
-        //
+    //
         // display any error messages before we print out the form
-        
-        if ($errorMsg1){
-            print '<div id="errors">' . PHP_EOL;
-            print '<h2>Your blog post has the following mistakes that need to be fixed.</h2>' . PHP_EOL;
-            print '<ol>' . PHP_EOL;
-            
-            foreach ($errorMsg1 as $err1) {
-                print '<li>' . $err1 . '</li>' . PHP_EOL;
-            }
-            
-            print '</ol>' . PHP_EOL;
-            print '</div>' . PHP_EOL;
+
+    if ($errorMsg1) {
+        print '<div id="errors">' . PHP_EOL;
+        print '<h2>Your blog post has the following mistakes that need to be fixed.</h2>' . PHP_EOL;
+        print '<ol>' . PHP_EOL;
+
+        foreach ($errorMsg1 as $err1) {
+            print '<li>' . $err1 . '</li>' . PHP_EOL;
         }
 
+        print '</ol>' . PHP_EOL;
+        print '</div>' . PHP_EOL;
+    }
 
-        //#############################
-        //
+
+    //#############################
+    //
         // SECTION 3c html Form
-        //
+    //
         /* Display the HTML form. not that the action is to this same page $phpSelf
-            is defined in top.php
-            NOTE the line:
-            value="<?php print $email; ?>
-            this make the form sticky by displaying either the initial default value (line ??)
-            or the value they typed in (line ??)
-            NOTE this line:
-            <?php if($emailERROR) print 'class="mistake"' ; ?>
-            this prints out a css class so that we can highlight the background etc. to
-            make it stand out that a mistake happened here.
-         */
+      is defined in top.php
+      NOTE the line:
+      value="<?php print $email; ?>
+      this make the form sticky by displaying either the initial default value (line ??)
+      or the value they typed in (line ??)
+      NOTE this line:
+      <?php if($emailERROR) print 'class="mistake"' ; ?>
+      this prints out a css class so that we can highlight the background etc. to
+      make it stand out that a mistake happened here.
+     */
     ?>
-       
-    <!-- ######################## START OF FORM BUTTONS / TEXT BOXES ############################ -->
-    <form action="<?php print $phpSelf; ?>"
-          id="blogPostForm"
-          method="post">
-        <!-- ######################## FIRST NAME TEXT BOX ######################### -->
-                <fieldset class="contactInfo">
-                    <legend>Personal Information</legend>
-                    <p>Feel free to leave a comment here. We will review all comments 
-                        and translate those in other languages, so that everyone can 
-                        share their language experience! Thank you.</p>
-                    <p>
-                        <label class="required text-field" for="txtFirstName">First Name</label>
-                        <input
-                                <?php if ($firstName1ERROR) print 'class="mistake"'; ?>
-                                 id="txtFirstName"
-                                 maxlength="45"
-                                 name="txtFirstName"
-                                 onfocus="this.select()"
-                                 placeholder="First Name"
-                                 tabindex="100"
-                                 type="text"
-                                 value="<?php print $firstName1; ?>"
-                            >
-                    </p>
-        <!-- #################### LAST NAME TEXT BOX ################### -->
-                     <p>
-                        <label class="required text-field" for="txtLastName">Last Name</label>
-                            <input
-                                <?php if ($lastName1ERROR) print 'class="mistake"'; ?>
-                                 id="txtLastName"
-                                 maxlength="45"
-                                 name="txtLastName"
-                                 onfocus="this.select()"
-                                 placeholder="Last Name"
-                                 tabindex="110"
-                                 type="text"
-                                 value="<?php print $lastName1; ?>"
-                            >
-                     </p>
-                     
-                        <!-- ######################ENTER USER EMAIL HERE AGAIN ###################### -->
-   
-                    <p>
-                        <label class="required text-field" for="txtEmail">Email</label>
-                            <input
-                                <?php if ($email1ERROR) print 'class="mistake"'; ?>
-                                id="txtEmail"
-                                maxlength="45"
-                                name="txtEmail"
-                                onfocus="this.select()"
-                                placeholder="Enter a valid email address"
-                                tabindex="120"
-                                type="text"
-                                value="<?php print $email1; ?>"
-                            >
-                    </p>
-   
-   <!-- #######################END THE USER EMAIL INPUT #####################3 -->
-   <!-- #################### COMMENT BOX HERE ######################## -->
-                <fieldset class="blogPostBox">
-                      <p>
-                          <label class ="required" for="txtBlogPost">Blog It!</label>
-                          <textarea <?php if ($blogPost1ERROR) print 'class="mistake"'; ?> 
-                              id="txtBlogPost"
-                              name="txtBlogPost"
-                              onfocus="this.select()"
-                              tabindex="200"><?php print $blogPost1; ?>
-                              
-                          </textarea>
-                      </p>
-                </fieldset>
-   
 
-   
-     <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
-     
+        <!-- ######################## START OF FORM BUTTONS / TEXT BOXES ############################ -->
+        <form action="<?php print $phpSelf; ?>"
+              id="blogPostForm"
+              method="post">
+            <!-- ######################## FIRST NAME TEXT BOX ######################### -->
+            <fieldset class="contactInfo">
+                <legend>Personal Information</legend>
+                <p>Feel free to leave a comment here. We will review all comments 
+                    and translate those in other languages, so that everyone can 
+                    share their language experience! Thank you.</p>
+                <p>
+                    <label class="required text-field" for="txtFirstName">First Name</label>
+                    <input
+    <?php if ($firstName1ERROR) print 'class="mistake"'; ?>
+                        id="txtFirstName"
+                        maxlength="45"
+                        name="txtFirstName"
+                        onfocus="this.select()"
+                        placeholder="First Name"
+                        tabindex="100"
+                        type="text"
+                        value="<?php print $firstName1; ?>"
+                        >
+                </p>
+                <!-- #################### LAST NAME TEXT BOX ################### -->
+                <p>
+                    <label class="required text-field" for="txtLastName">Last Name</label>
+                    <input
+    <?php if ($lastName1ERROR) print 'class="mistake"'; ?>
+                        id="txtLastName"
+                        maxlength="45"
+                        name="txtLastName"
+                        onfocus="this.select()"
+                        placeholder="Last Name"
+                        tabindex="110"
+                        type="text"
+                        value="<?php print $lastName1; ?>"
+                        >
+                </p>
+
+                <!-- ######################ENTER USER EMAIL HERE AGAIN ###################### -->
+
+                <p>
+                    <label class="required text-field" for="txtEmail">Email</label>
+                    <input
+    <?php if ($email1ERROR) print 'class="mistake"'; ?>
+                        id="txtEmail"
+                        maxlength="45"
+                        name="txtEmail"
+                        onfocus="this.select()"
+                        placeholder="Enter a valid email address"
+                        tabindex="120"
+                        type="text"
+                        value="<?php print $email1; ?>"
+                        >
+                </p>
+            </fieldset>
+            <!-- #######################END THE USER EMAIL INPUT #####################3 -->
+            <!-- #################### COMMENT BOX HERE ######################## -->
+            <fieldset class="blogPostBox">
+                <p>
+                    <label class ="required" for="txtBlogPost">Blog It!</label>
+                    <textarea <?php if ($blogPost1ERROR) print 'class="mistake"'; ?> 
+                        id="txtBlogPost"
+                        name="txtBlogPost"
+                        onfocus="this.select()"
+                        tabindex="200"><?php print $blogPost1; ?>
+
+                    </textarea>
+                </p>
+            </fieldset>
+
+
+
+            <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
+
             <fieldset class="buttons">
                 <legend></legend>
                 <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
         </form>
-    
-</article>
-     
 
- 
-<?php
+    </article>
+
+
+
+    <?php
 //ends body submit
 }
 ?>
-     
+
 <?php
 include ('footer.php');
 ?>  
