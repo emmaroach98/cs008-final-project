@@ -257,7 +257,7 @@ if ($nameOfText == "") {
 }
   // we need to make a foreach loop to validate that one of the radio buttons are pressed
     if ($languageTranslate == "" ){
-        $errorMsg[] = "You need to pick a language to translate too";
+        $errorMsg[] = "You need to pick a language to translate to";
         $languageTranslateERROR = true;     
     }
     
@@ -427,7 +427,7 @@ if ($nameOfText == "") {
                                  placeholder="First Name"
                                  tabindex="100"
                                  type="text"
-                                 value="First Name"
+                                 value="<?php print $firstName; ?>"
                             >
                     </p>
         <!-- #################### LAST NAME TEXT BOX ################### -->
@@ -442,7 +442,7 @@ if ($nameOfText == "") {
                                  placeholder="Last Name"
                                  tabindex="110"
                                  type="text"
-                                 value="Last Name"
+                                 value="<?php print $lastName; ?>"
                             >
                      </p>
       <!-- #################### EMAIL TEXT BOX ###################### --> 
@@ -457,7 +457,7 @@ if ($nameOfText == "") {
                                 placeholder="Enter a valid email address"
                                 tabindex="120"
                                 type="text"
-                                value="Email"
+                                value="<?php print $email; ?>"
                             >
                     </p>
                     
@@ -472,7 +472,7 @@ if ($nameOfText == "") {
                                 placeholder="Authors Name"
                                 tabindex="130"
                                 type="text"
-                                value="Author of Text>"
+                                value="<?php print $authorOfText; ?>"
                             >
                     </p>
                     
@@ -487,7 +487,7 @@ if ($nameOfText == "") {
                                 placeholder="Enter name of text to translate"
                                 tabindex="140"
                                 type="text"
-                                value="Name of Text"
+                                value="<?php print $nameOfText; ?>"
                             >
                      </p>          
                   
@@ -500,11 +500,21 @@ if ($nameOfText == "") {
                 <p>
                     <label class="radio-field">
                         <input type="radio"
+                               id="radTranslateEnglish"
+                               name="radLanguages"
+                               value="English"
+                               tabindex="150"
+                               <?php if ($languageTranslate == "English") echo ' checked="checked" '; ?>>
+                        English</label>
+                </p>
+                <p>
+                    <label class="radio-field">
+                        <input type="radio"
                                id="radTranslateGerman"
                                name="radLanguages"
                                value="German"
-                               tabindex="150"
-                               <?php if ($languageTranslate == "radGerman") echo ' checked="checked" '; ?>>
+                               tabindex="160"
+                               <?php if ($languageTranslate == "German") echo ' checked="checked" '; ?>>
                         German</label>
                 </p>
                 
@@ -514,8 +524,8 @@ if ($nameOfText == "") {
                                id="radTranslateFrench"
                                name="radLanguages"
                                value="French"
-                               tabindex="160"
-                               <?php if ($languageTranslate == "radFrench") echo ' checked="checked" '; ?>>
+                               tabindex="170"
+                               <?php if ($languageTranslate == "French") echo ' checked="checked" '; ?>>
                         French</label>
                 </p>
                 
@@ -525,8 +535,8 @@ if ($nameOfText == "") {
                                id="radTranslateSpanish"
                                name="radLanguages"
                                value="Spanish"
-                               tabindex="170"
-                               <?php if ($languageTranslate == "radSpanish") echo ' checked="checked" '; ?>>
+                               tabindex="180"
+                               <?php if ($languageTranslate == "Spanish") echo ' checked="checked" '; ?>>
                         Spanish</label>
                 </p>
             </fieldset>
@@ -539,30 +549,30 @@ if ($nameOfText == "") {
                 <legend>Native Language</legend>
                 <select id="lstNativeLanguages"
                     name="lstNativeLanguage"
-                    tabindex="180" >
-                    <option <?php if($nativeLanguage=="lstEnglish") print " selected "; ?>
-                        value ="lstEnglish">English</option>
+                    tabindex="190" >
+                    <option <?php if($nativeLanguage=="English") print " selected "; ?>
+                        value="English">English</option>
                     
-                    <option <?php if($nativeLanguage=="lstSpanish") print " selected "; ?>
-                        value ="lstSpanish">Spanish</option>
+                    <option <?php if($nativeLanguage=="Spanish") print " selected "; ?>
+                        value="Spanish">Spanish</option>
                     
-                    <option <?php if($nativeLanguage=="lstGerman") print " selected "; ?>
-                        value ="lstGerman">German</option>
+                    <option <?php if($nativeLanguage=="German") print " selected "; ?>
+                        value="German">German</option>
                     
-                    <option <?php if($nativeLanguage=="lstFrench") print " selected "; ?>
-                        value ="lstFrench">French</option>
+                    <option <?php if($nativeLanguage=="French") print " selected "; ?>
+                        value="French">French</option>
                     
-                    <option <?php if($nativeLanguage=="lstRussian") print " selected "; ?>
-                        value ="lstRussian">Russian</option>
+                    <option <?php if($nativeLanguage=="Russian") print " selected "; ?>
+                        value="Russian">Russian</option>
                     
-                    <option <?php if($nativeLanguage=="lstPortuguese") print " selected "; ?>
-                        value="lstPortuguese">Portuguese</option>
+                    <option <?php if($nativeLanguage=="Portuguese") print " selected "; ?>
+                        value="Portuguese">Portuguese</option>
                     
-                    <option <?php if($nativeLanguage=="lstHindi") print " selected "; ?>
-                        value ="lstHindi">Hindi</option>
+                    <option <?php if($nativeLanguage=="Hindi") print " selected "; ?>
+                        value="Hindi">Hindi</option>
                     
-                    <option <?php if($nativeLanguage=="lstArabic") print " selected "; ?>
-                        value ="lstArabic">Arabic</option>
+                    <option <?php if($nativeLanguage=="Arabic") print " selected "; ?>
+                        value="Arabic">Arabic</option>
                 </select>
             </p>
             </fieldset>
@@ -575,9 +585,9 @@ if ($nameOfText == "") {
                         <input <?php if($english) print " checked "; ?>
                             id="chkEnglish"
                             name="chkEnglish"
-                            tabindex="180"
+                            tabindex="200"
                             type="checkbox"
-                            value="english"> English</label>
+                            value="English"> English</label>
                 </p>
                 
                 <p>
@@ -585,9 +595,9 @@ if ($nameOfText == "") {
                         <input <?php if ($spanish) print " checked "; ?>
                             id="chkSpansih"
                             name="chkSpanish"
-                            tabindex="190"
+                            tabindex="210"
                             type="checkbox"
-                            value="spanish">Spanish</label>
+                            value="Spanish">Spanish</label>
                 </p>
                 
                 <p>
@@ -595,9 +605,9 @@ if ($nameOfText == "") {
                         <input <?php if ($german) print " checked "; ?>
                             id="chkGerman"
                             name="chkGerman"
-                            tabindex="200"
+                            tabindex="220"
                             type="checkbox"
-                            value="german">German</label>
+                            value="German">German</label>
                 </p>
                 
                 <p>
@@ -605,9 +615,9 @@ if ($nameOfText == "") {
                         <input <?php if ($french) print " checked "; ?>
                             id="chkFrench"
                             name="chkFrench"
-                            tabindex="210"
+                            tabindex="230"
                             type="checkbox"
-                            value="french">French</label>
+                            value="French">French</label>
                 </p>
                 
                 <p>
@@ -615,9 +625,9 @@ if ($nameOfText == "") {
                         <input <?php if ($russian) print " checked "; ?>
                             id="chkRussian"
                             name="chkRussian"
-                            tabindex="220"
+                            tabindex="240"
                             type="checkbox"
-                            value="russian">Russian</label>
+                            value="Russian">Russian</label>
                 </p>
                 
                 <p>
@@ -625,9 +635,9 @@ if ($nameOfText == "") {
                         <input <?php if ($portuguese) print " checked "; ?>
                             id="chkPortuguese"
                             name="chkPortuguese"
-                            tabindex="230"
+                            tabindex="250"
                             type="checkbox"
-                            value="portuguese">Portuguese</label>
+                            value="Portuguese">Portuguese</label>
                 </p>
                 
                 <p>
@@ -635,9 +645,9 @@ if ($nameOfText == "") {
                         <input <?php if ($hindi) print " checked "; ?>
                             id="chkHindi"
                             name="chkHindi"
-                            tabindex="240"
+                            tabindex="260"
                             type="checkbox"
-                            value="hindi">Hindi</label>
+                            value="Hindi">Hindi</label>
                 </p>
                 
                 <p>
@@ -645,9 +655,9 @@ if ($nameOfText == "") {
                         <input <?php if ($arabic) print " checked "; ?>
                             id="chkArabic"
                             name="chkArabic"
-                            tabindex="2500"
+                            tabindex="270"
                             type="checkbox"
-                            value="arabic">Arabic</label>
+                            value="Arabic">Arabic</label>
                 </p>
             </fieldset>
    <!-- ######################## COMMENT BOX HERE ######################## -->
@@ -658,14 +668,14 @@ if ($nameOfText == "") {
                               id="txtComments"
                               name="txtComments"
                               onfocus="this.select()"
-                              tabindex="200"><?php print $comments; ?></textarea>
+                              tabindex="300"><?php print $comments; ?></textarea>
                       </p>
                 </fieldset>
      <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
      
             <fieldset class="buttons">
                 <legend></legend>
-                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
+                <input class="button" id="btnSubmit" name="btnSubmit" tabindex="400" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
     </form>
     
