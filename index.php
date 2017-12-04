@@ -4,9 +4,10 @@ include 'top.php';
 <article>
     <h1>The Art of Translation</h1>
     
+    <!-- image from thestocks.im -->
     <figure class="mediumBackground right-small img-border rounded-corners">
-        <img class="rounded-corners" src="" alt="">
-        <figcaption class="mediumBackground">put caption here</figcaption>
+        <img class="rounded-corners" src="images/indexpic.jpg" alt="">
+        <figcaption class="mediumBackground">Welcome to Burlington Translate!</figcaption>
     </figure>
     
     <p>In a world where countries have enough trouble communicating with each 
