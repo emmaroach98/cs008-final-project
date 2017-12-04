@@ -1,64 +1,6 @@
 <?php
 include 'top.php';
 ?>
-<article id="introBlogPost">        
-    <h1>Blog</h1>
-    <p>Welcome to our blog! Here, we just share some feedback left from different 
-        users of our website. Feel free to leave us comments in our request form, 
-        and you might be featured on our blog page. We encourage everyone to leave 
-        comments in their native language (we will translate) so that we can 
-        continue the connection between different languages. Thank you!</p>
-</article>
-<article class="blogPosts">
-    <figure>
-        <img alt="" src="images/anon_user.png">
-        <figcaption>Anna Schmidt</figcaption>
-    </figure>
-    <p class="postExample">Hallo! Ich heiße Anna, und ich komme aus Deutschland. Ich studiere Literatur, 
-        und ich finde Übersetzung sehr wichtig, weil viele Länder besser miteinander 
-        kommunizieren können, wenn sie die Sprache der andere Länder lesen können. 
-        Aber viele Leute kann nur ein oder zwei Sprachen sprechen/lesen, und deshalb 
-        sind Übersetzer sehr wichtig. Wir brauchen immer Leute, die andere Sprachen 
-        können, damit wir alle miteinander sprechen können. Ich bin so froh, dass 
-        Translating Burlington Übersetzungen macht, und wir können für spezifische 
-        Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
-        genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
-        Dank für diese Webseite, sie ist sehr schön.</p>
-    <p class="postExampleTranslation">Translation: Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
-        translation is very important. Countries can communicate with each other better 
-        when they can understand the languages of other countries. But a lot of people 
-        can only speak/read one or two languages, and therefore translators are very 
-        important. We always need more people that can speak other languages, so that 
-        we can all speak with each other. I’m very happy that Translation Burlington 
-        makes translations, and we can request specific texts to be translated. They’re 
-        really good, the translations are very realistic, exact, and understandable, 
-        and I will definitely recommend them to other people. Thank you so much for 
-        making this website, it’s amazing!</p>
-</article>
-
-<article class="blogPosts">
-    <figure>
-        <img alt="" src="images/anon_user.png">
-        <figcaption>Maria Rosso</figcaption>
-    </figure>
-    <p class="postExample">Ciao! Mi chiamo Maria, e studio la linguistica. Amo 
-        la traduzione perchè mi piace leggere i libri di molte lingue ma non posso 
-        leggere tutte le lingue. Perciò è la traduzione necessaria. Questo sito web 
-        è benissimo! Grazie per le traduzioni.</p>
-    <p class="postExampleTranslation">Translation: Hi! I'm Maria, and I study linguistics. 
-        I love translation because I like reading books from many languages, but 
-        I can't read every language. Therefore translation is necessary. This website
-        is wonderful! Thank you for the translations!</p>
-</article>
-
-<article class="blogPosts">
-    <figure>
-        <img alt="" src="images/anon_user.png">
-        <figcaption>Isabella Garcia</figcaption>
-    </figure>
-    <p class="postExample">¡Me encanta este sitio web! Soy estudiante en la universidad, y hago mucho investigación. A veces tengo fuentes muy larga y complicada en inglés que no puedo entender pero son importantes en mi trabajo. Por eso este sitio web es muy útil para mi. Puedo traducir las fuentes a español y no necesito preocuparme sobre la precisión de la traducción. ¡Muchísimas gracias!</p>
-    <p class="postExampleTranslation">Translation: I love this website! I am a student at university, and I do a lot of research. Sometimes I have very long and complicated sources in English that I cannot understand but are important in my work. Thus, this website is very useful for me. I can translate sources to Spanish and I don’t have to worry about the accuracy of the translation. Thank you so much!</p>
-</article>
 <!-- add more for more posts -->
 <!-- this area is for a user to input their own blog post --> 
 <?php
@@ -328,8 +270,9 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
                 <p>Feel free to leave a comment here. We will review all comments 
                     and translate those in other languages, so that everyone can 
                     share their language experience! Thank you.</p>
+                <div class="firstNameDiv">
                 <p>
-                    <label class="required text-field" for="txtFirstName">First Name</label>
+                    <label class="required text-field" for="txtFirstName"><span>First Name</span></label>
                     <input
     <?php if ($firstName1ERROR) print 'class="mistake"'; ?>
                         id="txtFirstName"
@@ -342,9 +285,11 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
                         value="<?php print $firstName1; ?>"
                         >
                 </p>
+                </div>
                 <!-- #################### LAST NAME TEXT BOX ################### -->
+                <div class="lastNameDiv">
                 <p>
-                    <label class="required text-field" for="txtLastName">Last Name</label>
+                    <label class="required text-field" for="txtLastName"><span>Last Name</span></label>
                     <input
     <?php if ($lastName1ERROR) print 'class="mistake"'; ?>
                         id="txtLastName"
@@ -357,11 +302,11 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
                         value="<?php print $lastName1; ?>"
                         >
                 </p>
-
+                </div>
                 <!-- ######################ENTER USER EMAIL HERE AGAIN ###################### -->
-
+                <div class="emailDiv">
                 <p>
-                    <label class="required text-field" for="txtEmail">Email</label>
+                    <label class="required text-field" for="txtEmail"><span>Email</span></label>
                     <input
     <?php if ($email1ERROR) print 'class="mistake"'; ?>
                         id="txtEmail"
@@ -374,27 +319,24 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
                         value="<?php print $email1; ?>"
                         >
                 </p>
-            </fieldset>
+                </div>
             <!-- #######################END THE USER EMAIL INPUT #####################3 -->
-            <!-- #################### COMMENT BOX HERE ######################## -->
-            <fieldset class="blogPostBox">
+            <!-- #################### BLOG BOX HERE ######################## -->
                 <p>
                     <label class ="required" for="txtBlogPost">Blog It!</label>
                     <textarea <?php if ($blogPost1ERROR) print 'class="mistake"'; ?> 
                         id="txtBlogPost"
-                        name="txtBlogPost"
+                        name="txtBlogPost"                     
                         onfocus="this.select()"
                         tabindex="200"><?php print $blogPost1; ?>
 
                     </textarea>
                 </p>
-            </fieldset>
 
 
 
             <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
 
-            <fieldset class="buttons">
                 <legend></legend>
                 <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
@@ -402,7 +344,65 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
 
     </article>
 
+<article id="introBlogPost">        
+    <h1>Blog</h1>
+    <p>Welcome to our blog! Here, we just share some feedback left from different 
+        users of our website. Feel free to leave us comments in our request form, 
+        and you might be featured on our blog page. We encourage everyone to leave 
+        comments in their native language (we will translate) so that we can 
+        continue the connection between different languages. Thank you!</p>
+</article>
 
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Anna Schmidt</figcaption>
+    </figure>
+    <p class="postExample">Hallo! Ich heiße Anna, und ich komme aus Deutschland. Ich studiere Literatur, 
+        und ich finde Übersetzung sehr wichtig, weil viele Länder besser miteinander 
+        kommunizieren können, wenn sie die Sprache der andere Länder lesen können. 
+        Aber viele Leute kann nur ein oder zwei Sprachen sprechen/lesen, und deshalb 
+        sind Übersetzer sehr wichtig. Wir brauchen immer Leute, die andere Sprachen 
+        können, damit wir alle miteinander sprechen können. Ich bin so froh, dass 
+        Translating Burlington Übersetzungen macht, und wir können für spezifische 
+        Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
+        genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
+        Dank für diese Webseite, sie ist sehr schön.</p>
+    <p class="postExampleTranslation">Translation: Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
+        translation is very important. Countries can communicate with each other better 
+        when they can understand the languages of other countries. But a lot of people 
+        can only speak/read one or two languages, and therefore translators are very 
+        important. We always need more people that can speak other languages, so that 
+        we can all speak with each other. I’m very happy that Translation Burlington 
+        makes translations, and we can request specific texts to be translated. They’re 
+        really good, the translations are very realistic, exact, and understandable, 
+        and I will definitely recommend them to other people. Thank you so much for 
+        making this website, it’s amazing!</p>
+</article>
+
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Maria Rosso</figcaption>
+    </figure>
+    <p class="postExample">Ciao! Mi chiamo Maria, e studio la linguistica. Amo 
+        la traduzione perchè mi piace leggere i libri di molte lingue ma non posso 
+        leggere tutte le lingue. Perciò è la traduzione necessaria. Questo sito web 
+        è benissimo! Grazie per le traduzioni.</p>
+    <p class="postExampleTranslation">Translation: Hi! I'm Maria, and I study linguistics. 
+        I love translation because I like reading books from many languages, but 
+        I can't read every language. Therefore translation is necessary. This website
+        is wonderful! Thank you for the translations!</p>
+</article>
+
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Isabella Garcia</figcaption>
+    </figure>
+    <p class="postExample">¡Me encanta este sitio web! Soy estudiante en la universidad, y hago mucho investigación. A veces tengo fuentes muy larga y complicada en inglés que no puedo entender pero son importantes en mi trabajo. Por eso este sitio web es muy útil para mi. Puedo traducir las fuentes a español y no necesito preocuparme sobre la precisión de la traducción. ¡Muchísimas gracias!</p>
+    <p class="postExampleTranslation">Translation: I love this website! I am a student at university, and I do a lot of research. Sometimes I have very long and complicated sources in English that I cannot understand but are important in my work. Thus, this website is very useful for me. I can translate sources to Spanish and I don’t have to worry about the accuracy of the translation. Thank you so much!</p>
+</article>
 
     <?php
 //ends body submit
