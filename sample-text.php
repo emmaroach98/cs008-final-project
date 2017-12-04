@@ -18,7 +18,7 @@ include ('top.php');
         <p>Über ein Jahr nahm sich der König eine andere Gemahlin. Es war eine schöne Frau, 
         aber sie war stolz und übermütig und konnte nicht leiden, daß sie an Schönheit von 
         jemand sollte übertroffen werden. Sie hatte einen wunderbaren Spiegel, wenn sie vor 
-        den trat und sich darin beschaute, sprach sie: </br>"Spieglein, Spieglein an der Wand,</br>
+        den trat und sich darin beschaute, sprach sie: <br/>"Spieglein, Spieglein an der Wand,<br/>
         wer ist die schönste im ganzen Land?
         <p>So antwortete der Spiegel: "Frau Königin, Ihr seid die schönste im Land."</p>
         <p>Da war sie zufrieden, denn sie wußte, daß der Spiegel die Wahrheit sagte.</p>
@@ -35,7 +35,7 @@ include ('top.php');
         ebony, who was named Snow White. And as soon as the child was born, the queen died.</p>
         <p>After a year, the king remarried. His new wife was a pretty woman, but she was proud 
         and carefree and couldn’t stand that her beauty could be surpassed by others. She had a 
-        magical mirror, which she looked in and said,</br> “Mirror, mirror on the wall,</br> Who 
+        magical mirror, which she looked in and said,<br/> “Mirror, mirror on the wall,<br/> Who 
         is the fairest of them all?”</p>
         <p>The mirror would answer, “My Queen, you are the fairest of them all.”</p>
         <p>Then she was satisfied, because she knew that the mirror only spoke the truth.</p>
@@ -89,11 +89,11 @@ include ('top.php');
             al Conservatorio: voleva di-ventare una grande rock star. Ma i soldi 
             non bastavano, perché faceva molto fred-do e in strada c’erano pochi passanti.</p>
         <p>Un giorno, mentre Peter stava suonando «Crossroads», gli si avvicinò un vecchio con un mandolino.</p>
-        <p>"Potresti cedermi il tuo posto? È sopra un tombino e ci fa più caldo."</br>
-            "Certo" - disse Peter che era di animo buono.</br>
-            "Potresti per favore prestarmi la tua sciarpa? Ho tanto freddo."</br>
-            "Certo" - disse Peter che era di animo buono.</br>
-            "Potresti darmi un po’ di soldi? Oggi non c’è gente, ho raggranel¬lato pochi spiccio-li e ho fame."</br>
+        <p>"Potresti cedermi il tuo posto? È sopra un tombino e ci fa più caldo."<br/>
+            "Certo" - disse Peter che era di animo buono.<br/>
+            "Potresti per favore prestarmi la tua sciarpa? Ho tanto freddo."<br/>
+            "Certo" - disse Peter che era di animo buono.<br/>
+            "Potresti darmi un po’ di soldi? Oggi non c’è gente, ho raggranel¬lato pochi spiccio-li e ho fame."<br/>
             "Certo" - disse Peter che eccetera. Aveva solo dieci monete nel cap¬pello e le diede tutte al vecchio.</p>
         <p>Allora avvenne un miracolo: il vecchio si trasformò in un omone truccato 
             con rim-mel e rossetto, una lunga criniera arancione, una palandrana 
@@ -106,11 +106,11 @@ include ('top.php');
             conservatory: he wanted to become a big rock star. But the money wasn't
             enough, because he played very stiffly, and there were few people in the streets.</p>
         <p>One day, while Peter was playing "Crossroads", an old man with a mandolin came along.</p>
-        <p>"Could you give me your place? It's above a manhole, and it's warmer there."</br>
-            "Certainly," said Peter, who was a good person.</br>
-            "Could you let me borrow your scarf? I'm so cold."</br>
-            "Certainly," - said Peter, because he was a good person.</br>
-            "Could you give me some money? There aren't any people today, but I scraped up some change and I'm hungry.</br>
+        <p>"Could you give me your place? It's above a manhole, and it's warmer there."<br/>
+            "Certainly," said Peter, who was a good person.<br/>
+            "Could you let me borrow your scarf? I'm so cold."<br/>
+            "Certainly," - said Peter, because he was a good person.<br/>
+            "Could you give me some money? There aren't any people today, but I scraped up some change and I'm hungry.<br/>
             "Certainly", said Peter, and so on. He only had ten coins in his hat, and he gave them all to the old man.</p>
         <p>And then a miracle happened: the old man transformed into a strong man, made up with mascara and lipstick, 
             a long orange mane, a came made of lamé, and wedges ten centimeters high.</p>
