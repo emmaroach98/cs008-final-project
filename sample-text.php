@@ -1,7 +1,8 @@
 <?php
 include ('top.php');
 ?>
-<h1>German Texts Translated to English</h1>
+<article>
+<h1>German Texts translated to English</h1>
 <section id="snowWhite">
     <article id="text1"> 
         <h2>Sneewittchen - The Brothers Grimm, 1854</h2>
@@ -23,7 +24,7 @@ include ('top.php');
         <p>Da war sie zufrieden, denn sie wußte, daß der Spiegel die Wahrheit sagte.</p>
     </article>
     <article id="text2"> 
-        <h2>Snow White - The Brothers Grimm 1854, translated by Emma Roach</h2>
+        <h2>Snow White - The Brothers Grimm, 1854, translated by Emma Roach</h2>
         <p>It was the middle of winter, and the snowflakes were falling like feathers from the 
         sky. The queen was sitting at the window with a black ebony frame, and sewing. And 
         while she was sewing, and looking at the snow, she pricked her finger with the needle, 
@@ -61,7 +62,7 @@ include ('top.php');
         Kinder dauern mich doch", sagte der Mann.</p>
     </article>
     <article id="text4"> 
-        <h2>Hansel and Gretel - The Brothers Grimm 1821, translated by Emma Roach</h2>
+        <h2>Hansel and Gretel - The Brothers Grimm, 1812, translated by Emma Roach</h2>
         <p>A poor lumberjack lived outside a big forest with his wife and his two kids: the 
         little boy was named Hansel, and the little girl was named Gretel. The lumberjack 
         had very little to eat, and once, when the whole country was in a depression, he 
@@ -79,6 +80,44 @@ include ('top.php');
         me,” said the man.</p>
     </article>
 </section>
+<h1>Italian Texts translated to English</h1>
+<section id="guitarMagic">
+    <article id="text5">
+        <h2>La chitarra magica - Stefano Benni</h2>
+        <p>C’era un giovane musicista di nome Peter che suonava la chitarra agli 
+            angoli delle strade. Racimolava così i soldi per proseguire gli studi 
+            al Conservatorio: voleva di-ventare una grande rock star. Ma i soldi 
+            non bastavano, perché faceva molto fred-do e in strada c’erano pochi passanti.</p>
+        <p>Un giorno, mentre Peter stava suonando «Crossroads», gli si avvicinò un vecchio con un mandolino.</p>
+        <p>"Potresti cedermi il tuo posto? È sopra un tombino e ci fa più caldo."</br>
+            "Certo" - disse Peter che era di animo buono.</br>
+            "Potresti per favore prestarmi la tua sciarpa? Ho tanto freddo."</br>
+            "Certo" - disse Peter che era di animo buono.</br>
+            "Potresti darmi un po’ di soldi? Oggi non c’è gente, ho raggranel¬lato pochi spiccio-li e ho fame."</br>
+            "Certo" - disse Peter che eccetera. Aveva solo dieci monete nel cap¬pello e le diede tutte al vecchio.</p>
+        <p>Allora avvenne un miracolo: il vecchio si trasformò in un omone truccato 
+            con rim-mel e rossetto, una lunga criniera arancione, una palandrana 
+            di lamé e zeppe alte dieci centimetri.</p>
+    </article>
+    <article id="text6">
+        <h2>The Magical Guitar - Stefano Benni, translated by Emma Roach</h2>
+        <p>There was a young musician named Peter who played the guitar to the angels 
+            on the streets. He saved up some money to continue his studies at the 
+            conservatory: he wanted to become a big rock star. But the money wasn't
+            enough, because he played very stiffly, and there were few people in the streets.</p>
+        <p>One day, while Peter was playing "Crossroads", an old man with a mandolin came along.</p>
+        <p>"Could you give me your place? It's above a manhole, and it's warmer there."</br>
+            "Certainly," said Peter, who was a good person.</br>
+            "Could you let me borrow your scarf? I'm so cold."</br>
+            "Certainly," - said Peter, because he was a good person.</br>
+            "Could you give me some money? There aren't any people today, but I scraped up some change and I'm hungry.</br>
+            "Certainly", said Peter, and so on. He only had ten coins in his hat, and he gave them all to the old man.</p>
+        <p>And then a miracle happened: the old man transformed into a strong man, made up with mascara and lipstick, 
+            a long orange mane, a came made of lamé, and wedges ten centimeters high.</p>
+    </article>
+
+</section>
+</article>
 <?php
 include ('footer.php');
 ?>
