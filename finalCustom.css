@@ -14,16 +14,6 @@ footer {
     text-align: center;
     margin: 0 auto;
     width: 100%;
-    clear: both;
-}
-
-footer p {
-    padding: 20px;
-    background-color: rgb(14, 109, 140);
-}
-
-header {
-    background-color: rgb(14, 109, 140);
 }
 
 h1, h2 {
@@ -57,7 +47,6 @@ nav ol li {
     border: none !important;
     max-width: 75%;
     margin: 0 auto;
-    background-color: rgb(14, 109, 140);
 }
 
 .right-small {
@@ -101,7 +90,8 @@ nav ol li {
 }
 
 .blogPosts figure {
-    margin: 0;
+    margin: auto;
+    padding-bottom: 5px;
 }
 
 .blogPosts figcaption {
@@ -116,10 +106,23 @@ nav ol li {
     background-color: rgb(128, 207, 233);
 }
 
-/*===================== sample texts =====================*/
-#sample-text h1 {
-    clear: both;
+#txtBlogPost {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
+
+div {
+    display: inline-block;
+}
+
+div label {
+    display: block;
+}
+
+
+/*===================== sample texts =====================*/
 
 #text1, #text3, #text5 {
     float: left;
