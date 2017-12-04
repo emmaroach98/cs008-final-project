@@ -545,8 +545,8 @@ if ($nameOfText == "") {
                       
                 <!-- ######################### adding a list box ########################### -->
             <fieldset class="listbox <?php if ($nativeLanguageERROR) print ' mistake'; ?>">
-                <p>
                 <legend>Native Language</legend>
+                <p>
                 <select id="lstNativeLanguages"
                     name="lstNativeLanguage"
                     tabindex="190" >
