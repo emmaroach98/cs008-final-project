@@ -18,7 +18,7 @@ footer {
 }
 
 header {
-    background-color: rgb(67, 171, 206);
+    background-color: rgb(14, 109, 140);
 }
 
 h1, h2 {
@@ -52,7 +52,7 @@ nav ol li {
     border: none !important;
     max-width: 75%;
     margin: 0 auto;
-    background-color: rgb(67, 171, 206);
+    background-color: rgb(14, 109, 140);
 }
 
 .right-small {
