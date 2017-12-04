@@ -4,9 +4,10 @@ include ('top.php');
 <!--start of Origins article-->
 <article id="origin">
   <h1>The Origins of Language</h1>
+  <!-- image from thestocks.im -->
   <figure class="right-small img-border rounded-corners"> <!---add more classes as needed-->
-    <img class="rounded-corners" alt="" src="">
-    <figcaption>put caption here</figcaption>
+      <img class="rounded-corners" alt="Old books covers" src="images/originpic.jpg">
+      <figcaption>Language may be the most important aspect of our lives</figcaption>
   </figure>
   <p>Language is perhaps the most important development in our history as humans. 
       Though it is extremely difficult to know for sure how language began, and 
@@ -35,9 +36,10 @@ include ('top.php');
 <!--start of Importance article, we may not need 2 articles, depends on CSS we want-->
 <article id="importance"> 
   <h1>Why is Translation Important?</h1>
+  <!-- image from thestocks.im -->
   <figure class="right-small img-border rounded-corners"> <!---add more classes as needed-->
-    <img class="rounded-corners" alt="" src="">
-    <figcaption>put caption here</figcaption>
+      <img class="rounded-corners" alt="A translation from one language to another" src="images/translationimportance.jpg">
+    <figcaption>Translation between languages allows cultures to mix, which is necessary in the world we live in</figcaption>
   </figure>
   <p>Learning a second language later in life is another phenomenon that amazes 
       linguists and neuroscientists. When we learn our native language, we aren’t 
