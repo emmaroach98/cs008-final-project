@@ -11,8 +11,8 @@ include 'top.php';
 </article>
 <article class="blogPosts">
     <figure>
-        
-        <figcaption>anna101</figcaption>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Anna Schmidt</figcaption>
     </figure>
     <p class="postExample">Hallo! Ich heiße Anna, und ich komme aus Deutschland. Ich studiere Literatur, 
         und ich finde Übersetzung sehr wichtig, weil viele Länder besser miteinander 
@@ -24,7 +24,7 @@ include 'top.php';
         Texten erbitten. Sie sind sehr gut, die Übersetzungen sind realistisch, 
         genau und verständlich, und ich werde sie anderen Leuten empfehlen. Vielen 
         Dank für diese Webseite, sie ist sehr schön.</p>
-    <p class="postExampleTranslation">Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
+    <p class="postExampleTranslation">Translation: Hi! My name is Anna, and I’m from Germany. I study literature, and I think 
         translation is very important. Countries can communicate with each other better 
         when they can understand the languages of other countries. But a lot of people 
         can only speak/read one or two languages, and therefore translators are very 
@@ -34,6 +34,21 @@ include 'top.php';
         really good, the translations are very realistic, exact, and understandable, 
         and I will definitely recommend them to other people. Thank you so much for 
         making this website, it’s amazing!</p>
+ </article>
+
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Maria Rosso</figcaption>
+    </figure>
+    <p class="postExample">Ciao! Mi chiamo Maria, e studio la linguistica. Amo 
+        la traduzione perchè mi piace leggere i libri di molte lingue ma non posso 
+        leggere tutte le lingue. Perciò è la traduzione necessaria. Questo sito web 
+        è benissimo! Grazie per le traduzioni.</p>
+    <p class="postExampleTranslation">Translation: Hi! I'm Maria, and I study linguistics. 
+        I love translation because I like reading books from many languages, but 
+        I can't read every language. Therefore translation is necessary. This website
+        is wonderful! Thank you for the translations!</p>
  </article>
  
     <!-- add more for more posts -->
@@ -320,7 +335,7 @@ if (!$errorMsg1) {
                         share their language experience! Thank you.</p>
                     <p>
                         <label class="required text-field" for="txtFirstName">First Name</label>
-                        <input autofocus
+                        <input
                                 <?php if ($firstName1ERROR) print 'class="mistake"'; ?>
                                  id="txtFirstName"
                                  maxlength="45"
