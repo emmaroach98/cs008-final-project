@@ -51,6 +51,14 @@ include 'top.php';
         is wonderful! Thank you for the translations!</p>
 </article>
 
+<article class="blogPosts">
+    <figure>
+        <img alt="" src="images/anon_user.png">
+        <figcaption>Isabella Garcia</figcaption>
+    </figure>
+    <p class="postExample">¡Me encanta este sitio web! Soy estudiante en la universidad, y hago mucho investigación. A veces tengo fuentes muy larga y complicada en inglés que no puedo entender pero son importantes en mi trabajo. Por eso este sitio web es muy útil para mi. Puedo traducir las fuentes a español y no necesito preocuparme sobre la precisión de la traducción. ¡Muchísimas gracias!</p>
+    <p class="postExampleTranslation">Translation: I love this website! I am a student at university, and I do a lot of research. Sometimes I have very long and complicated sources in English that I cannot understand but are important in my work. Thus, this website is very useful for me. I can translate sources to Spanish and I don’t have to worry about the accuracy of the translation. Thank you so much!</p>
+</article>
 <!-- add more for more posts -->
 <!-- this area is for a user to input their own blog post --> 
 <?php
