@@ -13,15 +13,11 @@ article {
 footer {
     text-align: center;
     margin: 0 auto;
-    max-width: 80%;
+    width: 100%;
 }
 
-h1 {
+h1, h2 {
   text-align: center;
-}
-
-h2 {
-   text-align: center;
 }
 
 img {
@@ -64,11 +60,6 @@ nav ol li {
 
 /*===================== about authors =====================*/
 
-#about-authors footer{
-    margin: auto;
-    width: 100%;
-}
-
 .bioPhoto {
     display: inline-block;
     width: 100%;
@@ -82,7 +73,7 @@ nav ol li {
     text-align: center;
 }
 
-#about-authors p {
+#about-authors article p {
     display: inline-block;
     float: left;
     text-align: left;
@@ -115,33 +106,25 @@ nav ol li {
 }
 
 /*===================== sample texts =====================*/
-#sample-text section{
-    max-width: 80%;
-    margin: 0 auto;
-}
 
-#sample-text article {
+#text1, #text3, #text5 {
+    float: left;
     border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
-    width: 400px;
+    width: 450px;
     height: 650px;
-    margin: 1em;
+    margin: 2em;
 }
 
-#text1 {
-    float: left;
-}
-
-#text2 {
+#text2, #text4, #text6 {
     float: right;
-}
-
-#text3 {
-    float: left;
-}
-#text4 {
-    float: right;
+    border: thin rgb(14, 109, 140) solid;
+    display: inline-block;
+    padding: 1em;
+    width: 450px;
+    height: 650px;
+    margin: 2em;
 }
 
 /*===================== form =====================*/
