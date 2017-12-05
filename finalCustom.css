@@ -14,6 +14,16 @@ footer {
     text-align: center;
     margin: 0 auto;
     width: 100%;
+    clear: both;
+}
+
+footer p {
+    padding: 20px;
+    background-color: rgb(14, 109, 140);
+}
+
+header {
+    background-color: rgb(14, 109, 140);
 }
 
 h1, h2 {
@@ -61,6 +71,7 @@ nav a {
     border: none !important;
     max-width: 75%;
     margin: 0 auto;
+    background-color: rgb(14, 109, 140);
 }
 
 .right-small {
@@ -137,6 +148,9 @@ div label {
 
 
 /*===================== sample texts =====================*/
+#sample-text h1 {
+    clear: both;
+}
 
 #text1, #text3, #text5 {
     float: left;
