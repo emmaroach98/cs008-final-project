@@ -27,7 +27,9 @@ header {
 }
 
 h1, h2 {
+  width: 100%;
   text-align: center;
+  clear: both;
 }
 
 img {
@@ -43,7 +45,7 @@ nav ol {
 nav ol li {
     display: inline-block;
     list-style-type: none;
-    padding: .75em 0em 1em 0em;
+    padding: 1em 0em 1em 0em;
 }
 
 nav a {
@@ -56,7 +58,7 @@ nav a {
     border-top: thin solid rgb(1, 44, 58);
     border-right: thin solid rgb(1, 44, 58);
     border-left: thin solid rgb(1, 44, 58);
-    border-bottom: thin solid rgb(1, 44, 58)
+    border-bottom: thin solid rgb(1, 44, 58);
     padding: 1em;
 }
 
@@ -150,9 +152,6 @@ div label {
 
 
 /*===================== sample texts =====================*/
-#sample-text h1 {
-    clear: both;
-}
 
 #text1, #text3, #text5 {
     float: left;
@@ -160,7 +159,9 @@ div label {
     display: inline-block;
     padding: 1em;
     width: 40%;
+    min-width: 350px;
     height: 700px;
+    min-height: 750px;
     margin: 1em;
     border-radius: 0.4em;
 }
@@ -171,7 +172,9 @@ div label {
     display: inline-block;
     padding: 1em;
     width: 40%;
+    min-width: 350px;
     height: 700px;
+    min-height: 750px;
     margin: 1em;
     border-radius: 0.4em;
 }
@@ -197,7 +200,7 @@ fieldset {
 input {
     border: 3px ridge rgb(14, 109, 140);
     background-color: rgb(128, 207, 233);
-        border-radius: 0.4em;
+    border-radius: 0.4em;
 }
 
 input:focus {
