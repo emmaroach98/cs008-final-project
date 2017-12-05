@@ -7,7 +7,7 @@ function verifyAlphaNum($testString) {
     // Check for letters, numbers and dash, period, space and single quote only.
     // added & ; and # as a single quote sanitized with html entities will have 
     // this in it bob's will be come bob&#039;s
-    return (preg_match ("/^([[:alnum:]]|-|\.| |\'|&|;|#)+$/", $testString));
+    return (preg_match ("/^([[:alnum:]]|-|\.| |\'|&|;|#|\!|,)+$/", $testString));
 }
 function verifyEmail($testString) {
     // Check for a valid email address 
