@@ -26,12 +26,26 @@ img {
 
 nav ol {
     text-align: center;
+    border-bottom: 0.2em solid rgb(1, 44, 58);
+    margin-top: 0;
 }
 
 nav ol li {
     display: inline-block;
     list-style-type: none;
-    padding-right: 3em;
+    padding: .75em 0em 1em 0em;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 1em;
+}
+
+.activePage a{
+    background: whitesmoke;
+    border-top: thin solid rgb(1, 44, 58);
+    border-right: thin solid rgb(1, 44, 58);
+    border-left: thin solid rgb(1, 44, 58);
 }
 
 .mediumBackground {
@@ -129,9 +143,9 @@ div label {
     border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
-    width: 450px;
-    height: 650px;
-    margin: 2em;
+    width: 40%;
+    height: 700px;
+    margin: 1em;
     border-radius: 0.4em;
 }
 
@@ -140,9 +154,9 @@ div label {
     border: thin rgb(14, 109, 140) solid;
     display: inline-block;
     padding: 1em;
-    width: 450px;
-    height: 650px;
-    margin: 2em;
+    width: 40%;
+    height: 700px;
+    margin: 1em;
     border-radius: 0.4em;
 }
 
