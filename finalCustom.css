@@ -52,10 +52,12 @@ nav a {
 }
 
 .activePage a{
-    background: whitesmoke;
+    background-color: rgb(67, 171, 206);
     border-top: thin solid rgb(1, 44, 58);
     border-right: thin solid rgb(1, 44, 58);
     border-left: thin solid rgb(1, 44, 58);
+    border-bottom: thin solid rgb(1, 44, 58)
+    padding: 1em;
 }
 
 .mediumBackground {
