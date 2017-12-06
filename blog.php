@@ -330,9 +330,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
                         id="txtBlogPost"
                         name="txtBlogPost"                     
                         onfocus="this.select()"
-                        tabindex="200"><?php print $blogPost1; ?>
-
-                    </textarea>
+                        tabindex="200"><?php print $blogPost1;></textarea>
                 </p>
 
 
