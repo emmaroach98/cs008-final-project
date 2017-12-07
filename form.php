@@ -6,11 +6,11 @@ include 'top.php';
 //
 // SECTION: 1a. 
 // We print out the post array so that we can see our form is working. 
-// if ($debug){ // later you can uncomment the if statement
+if ($debug){ // later you can uncomment the if statement
     print '<p>Post Array:</p><pre>';
     print_r($_POST);
     print '</pre>';
-// }
+}
     
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 //
@@ -170,7 +170,7 @@ if (isset($_POST["btnSubmit"])) {
     
     if (isset($_POST["chkPortuguese"])) {
         $portuguese = true;
-        $dataRecord[] = htmlentities($_POST["chkPortguese"], ENT_QUOTES, "UTF-8");
+        $dataRecord[] = htmlentities($_POST["chkPortuguese"], ENT_QUOTES, "UTF-8");
         $totalChecked++;
     } else {
         $portuguese = false;
@@ -314,21 +314,21 @@ if ($nameOfText == "") {
         // build a message to display on the screen in section 3a and to mail
         // to the person filling our the form (section 2g).
            
-          $message = '<h2>Thanks for joining with our site!</h2>';
-          $message .= '<p style="color:blue;font-size:20px;">Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
+          $message = '<p style="color:blue;font-size:20px;">Thank you for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us.</p>';
           echo $message;
           
    // THIS ABOVE IF STATEMENT IS A TEST TO SEE IF WE CAN GET RID OF ALL THE VALUES IN THE EMAIL MESSAGE       
-       // foreach ($_POST as $htmlName => $value) {
-       //         $message .= '<p style="color:blue;font-size:20px;">';
-                //breaks up the form names into words. for example
-                // txtFirstName becomes First Name
-       //        $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
-       //         foreach ($camelCase as $oneWord) {
-       //             $message .= $oneWord . ' ';
-       //         }
-       //         $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . ' Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
-       //    }
+        foreach ($_POST as $htmlName => $value) {
+            $message .= '<p style="color:blue;font-size:20px;">';
+            //breaks up the form names into words. for example
+            // txtFirstName becomes First Name
+            $camelCase = preg_split('/(?=[A-Z])/', substr($htmlName, 3));
+                foreach ($camelCase as $oneWord) {
+                    $message .= $oneWord . ' ';
+                }
+                $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
+                
+            }
  
         //@@@@@@@@@@@@@@@@@@@@@@@@@@
         //
@@ -338,7 +338,7 @@ if ($nameOfText == "") {
         // the message was built section 2f. 
         $to = $email; // the person who filled out the form
         $cc = '';
-        $bcc = '';
+        $bcc = 'earoach@uvm.edu';
     
         $from = 'Translation Team <customer.service@BurlingtonTranslate.com>';
     
@@ -363,7 +363,6 @@ if ($nameOfText == "") {
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
     if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked with: end body submit
-        print '<h2>Thank you for using our service and for joining our website!</h2>';
         print '<p>For your records we sent you a copy of your translation request has ';
         if (!$mailed){
             print "not ";
