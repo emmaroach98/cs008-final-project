@@ -168,7 +168,8 @@ if (!$errorMsg1) {
         // build a message to display on the screen in section 3a and to mail
         // to the person filling our the form (section 2g).
 
-        $message = '<p style="color:blue;font-size:20px;">Thanks for joining <i><b>Burlington Translate!</i></b> You have submitted a text for our team to translate for you. You wanted the best so you came to us! Great choice! You will recieve an email from us containing all of the information that you have supplied to us. Thanks again for using <b><i>Burlington Translate!</i></b> </p>';
+        $message = '<h2>Thank you for posting on our blog!</h2>';
+        $message .= '<p style="color:blue;font-size:20px;">Thank you for leaving us a comment! We will read, approve, and translate all appropriate comments. You can expect to see your comment up within 1-2 days. We hope you are satisfied with your Burlington Translate experience, and we hope you come back soon. Thank you!</p>';
         echo $message;
 
 
@@ -183,8 +184,6 @@ if (!$errorMsg1) {
             }
             $message .= ' = ' . htmlentities($value, ENT_QUOTES, "UTF-8") . '</p>';
         }
-
-        $message .= '<p style="color:blue;font-size:20px;">Thank you for posting on our blog! We will review your comment and post all appropriate comments soon.</p>';
 
         //@@@@@@@@@@@@@@@@@@@@@@@@@@
         //
@@ -212,7 +211,6 @@ if (!$errorMsg1) {
 //if its the first time coming to the form or there are errors we are going 
 // to display the form.
 if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked with: end body submit
-    print '<h2>Thank you for posting on our blog!</h2>';
     print '<p>For your records we sent you a copy of your comment has ';
     if (!$mailed) {
         print "not ";
