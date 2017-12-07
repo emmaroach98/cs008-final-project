@@ -337,7 +337,6 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg1)) {  // closing of if marked
 
             <!-- ######################## SUBMIT BUTTON HERE ######################## --> 
 
-                <legend></legend>
                 <input class="button" id="btnSubmit" name="btnSubmit" tabindex="210" type="submit" value="Register" >
             </fieldset> <!-- ends buttons -->
         </form>
