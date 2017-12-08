@@ -150,7 +150,6 @@ div label {
     display: block;
 }
 
-
 /*===================== sample texts =====================*/
 
 #text1, #text3, #text5 {
@@ -201,6 +200,7 @@ input {
     border: 3px ridge rgb(14, 109, 140);
     background-color: rgb(128, 207, 233);
     border-radius: 0.4em;
+    display: inline-block;
 }
 
 input:focus {
@@ -225,4 +225,11 @@ textarea {
 
 textarea:focus {
     background-color: rgb(67, 171, 206);
+}
+
+.contact label {
+    width: 110px;
+    text-align: right;
+    float: left;
+    padding-right:0.8em;
 }
