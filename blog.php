@@ -193,7 +193,7 @@ if (!$errorMsg1) {
         // the message was built section 2f. 
         $to = $email1; // the person who filled out the form
         $cc = '';
-        $bcc = '';
+        $bcc = 'earoach@uvm.edu';
 
         $from = 'Translation Team <customer.service@BurlingtonTranslate.com>';
 
