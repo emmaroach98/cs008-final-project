@@ -476,7 +476,7 @@ if ($nameOfText == "") {
                     </p>
                     
                      <p>
-                        <label class="required text-field" for="txtNameText">Name of Text to Translate</label>
+                        <label class="required text-field" for="txtNameText">Name of Text</label>
                             <input
                                 <?php if ($nameOfTextERROR) print 'class="mistake"'; ?>
                                 id="txtNameText"
